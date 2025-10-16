@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contact Us - Trellis Farm and Flowers</title>
+        <Link rel="stylesheet" href="src/style.css" />
+        <script type="module" src="src/main.js"></script>
+    </head>
+    <body>
+        <header class="site-header">
+        <div class="container header-row">
+            <h1 class="brand">Trellis Farm and Flowers</h1>
+            <nav class="nav" aria-label="Primary navigation">
+            <a href="index.html">Produce</a>
+            <a href="index.html#availability">Availability</a>
+            <a href="index.html#wholesale">Wholesale</a>
+            <a href="contact.html" aria-current="page">Contact</a>
+            <a href="index.html#about">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="app" class="container">
+        <section class="contact-section" id="contact">
+            <h2 class="section-title">Contact Us</h2>
+            <p class="contact-text">We would love to hear from you! Whether you have questions about our produce, want to place an order, or just want to say hello, feel free to reach out to us using the contact form below or through the provided contact information.</p>
+            <div class="contact-info">
+                <p><strong>Address:</strong> 123 Farm Lane, Bluffdale, UT 84065</p>
+                <p><strong>Phone:</strong> (123) 123-1234</p>
+                <p><strong>Email:</strong> <a href="mailto: Trellisfarms">Trellisfarms</a>@example.com</p>
+                <p><strong>Business Hours:</strong> Monday - Friday: 9am - 5pm</p>
+            </div>
+        </section>
+
+        <!--Contact Form -->
+        <section class="form-section" aria-labelledby="contact-form-title">
+        <h3 id="contact-form-title" class="section-title">Send a Message</h3>
+
+        <div id="form-success" class="form-success" hidden>
+          Thanks! Your request was received. We will email you shortly.
+        </div>
+
+        <form id="contact-form" class="form" method="post" action="#">
+          <fieldset class="form-grid">
+            <legend class="sr-only">Your details</legend>
+
+            <div class="form-field">
+              <label for="name">Full Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required />
+            </div>
+
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+
+            <div class="form-field">
+              <label for="org">Business / Organization</label>
+              <input id="org" name="organization" type="text" autocomplete="organization" />
+            </div>
+
+            <div class="form-field">
+              <label for="interest">Primary Interest</label>
+              <select id="interest" name="interest" required>
+                <option value="" selected disabled>Select an option</option>
+                <option value="butterhead">Butterhead Lettuce</option>
+                <option value="basil">Basil</option>
+                <option value="chard">Rainbow Chard</option>
+                <option value="tomatoes">Cherry Tomatoes</option>
+                <option value="other">Other / Seasonal</option>
+              </select>
+            </div>
+
+            <div class="form-field form-field-full">
+                <label for="qty">Estimated Quantity</label>
+                <input id="qty" name="quantity" type="text" placeholder="e.g.,40 heads, 10 pints" />
+            </div>
+
+            <div class="form-field form-field-full">
+                <label for ="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Your message here..." required></textarea>
+            </div>
+            <div class="
