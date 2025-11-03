@@ -1,17 +1,30 @@
+/* ================================== */
+/* GOOGLE FONT IMPORT                  */
+/* Imports the 'Poppins' font family from 
+   Google Fonts with weights 400 (regular), 
+   500 (medium), and 600 (semibold). 
+   This ensures consistent typography sitewide. */
+/* ================================== */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 /* ================================== */
-/* VARIABLES / CUSTOM PROPERTIES      */
+/* VARIABLES / CUSTOM PROPERTIES       */
+/* Defines reusable color variables for 
+   consistent theme styling across all pages. 
+   These variables can be referenced anywhere 
+   using var(--variable-name). */
 /* ================================== */
 :root {
-  --color-primary: #4CAF50;
-  --color-primary-dark: #2E7D32;
-  --color-primary-light: #C8E6C9;
-  --color-accent: #FDD835;
-  --color-bg: #F9F7F3;
-  --color-text-dark: #2B2B2B;
-  --color-text-light: #FFFFFF;
+  --color-primary: #4CAF50;                     /* Main brand green used for buttons and highlights */
+  --color-primary-dark: #2E7D32;                /* Darker shade of green for hover states and headers */
+  --color-primary-light: #C8E6C9;               /* Light green used for soft backgrounds or accents */
+  --color-accent: #FDD835;                      /* Bright yellow accent color for emphasis */
+  --color-bg: #F9F7F3;                          /* Off-white background color for page sections */
+  --color-text-dark: #2B2B2B;                   /* Default dark text for body content */
+  --color-text-light: #FFFFFF;                  /* White text for contrast on dark backgrounds */
 }
+
 
 /* ================================== */
 /* ANIMATIONS / TRANSITIONS           */
@@ -20,23 +33,43 @@
 
 /* ================================== */
 /* BODY                               */
+/* Defines global page styling, including
+   typography, base colors, spacing, and
+   box model behavior across all elements. */
+/* ================================== */
+
+/* ================================== */
+/* UNIVERSAL BOX MODEL                 */
+/* Ensures consistent sizing for padding 
+   and borders across all elements. */
 /* ================================== */
 * {
-  box-sizing: border-box;
+  box-sizing: border-box;                       /* Includes padding and border in element width/height */
 }
 
+/* ================================== */
+/* GLOBAL BODY STYLES                  */
+/* Applies sitewide defaults for text,
+   background color, and layout alignment. */
+/* ================================== */
 body {
-  font-family: 'Poppins', sans-serif;
-  color: var(--color-text-dark);
-  background-color: var(--color-bg);
-  margin: 0;
-  line-height: 1.6;
-  text-align: center;
+  font-family: 'Poppins', sans-serif;           /* Sets clean, modern font across the site */
+  color: var(--color-text-dark);                /* Default dark gray text for readability */
+  background-color: var(--color-bg);            /* Light neutral background for contrast */
+  margin: 0;                                    /* Removes default browser margin */
+  line-height: 1.6;                             /* Improves text readability with balanced spacing */
+  text-align: center;                           /* Centers text globally (can be overridden later) */
+}                                                /* ✅ Added missing closing brace */
 
+/* ================================== */
+/* PAGE CONTAINER                      */
+/* Limits the width of content areas and 
+   centers them horizontally on the screen. */
+/* ================================== */
 .container {
-  width: 90%;
-  max-width: 1100px;
-  margin: 0 auto;
+  width: 90%;                                   /* Uses 90% of viewport width on small screens */
+  max-width: 1100px;                            /* Prevents lines from becoming too wide */
+  margin: 0 auto;                               /* Centers the container horizontally */
 }
 
 
@@ -47,47 +80,77 @@ body {
 
 /* ================================== */
 /* BUTTONS                            */
+/* Styles reusable button components, 
+   including primary, secondary, and badge 
+   variations for visual hierarchy and interaction. */
 /* ================================== */
+
 .btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background-color 0.3s;
+  display: inline-block;                        /* Allows padding and margin like a block element */
+  padding: 0.75rem 1.5rem;                      /* Adds inner space around text for comfort */
+  border-radius: 25px;                          /* Creates pill-shaped rounded corners */
+  text-decoration: none;                        /* Removes underlines for link-based buttons */
+  font-weight: 600;                             /* Makes button text bold and readable */
+  transition: background-color 0.3s;            /* Smooth color change on hover */
 }
+
+/* ================================== */
+/* PRIMARY BUTTON                      */
+/* Main action button used for important calls-to-action. */
+/* ================================== */
 
 .btn-primary {
-  background-color: var(--color-primary);
-  color: var(--color-text-light);
+  background-color: var(--color-primary);       /* Uses main brand color (green) */
+  color: var(--color-text-light);               /* White text for contrast */
 }
 
+/* Hover effect for primary button */
 .btn-primary:hover {
-  background-color: var(--color-primary-dark);
+  background-color: var(--color-primary-dark);  /* Darkens background on hover for feedback */
 }
+
+/* ================================== */
+/* SECONDARY BUTTON                    */
+/* Alternative button style used for less 
+   prominent actions (e.g., “Cancel” or “Learn More”). */
+/* ================================== */
 
 .btn-secondary {
-  background-color: var(--color-accent);
-  color: var(--color-text-dark);
+  background-color: var(--color-accent);        /* Yellow accent color for visual contrast */
+  color: var(--color-text-dark);                /* Dark text for readability on light background */
 }
 
+/* Hover effect for secondary button */
 .btn-secondary:hover {
-  background-color: #fbc02d;
+  background-color: #fbc02d;                    /* Slightly darker yellow on hover for interaction cue */
 }
+
+/* ================================== */
+/* BADGE CONTAINER                     */
+/* Controls spacing around multiple badges 
+   (often used below buttons or in cards). */
+/* ================================== */
 
 .badges {
-  margin-top: 1rem;
+  margin-top: 1rem;                             /* Adds space above the group of badges */
 }
 
+/* ================================== */
+/* INDIVIDUAL BADGE STYLING            */
+/* Small visual tags used for highlighting 
+   categories, statuses, or labels. */
+/* ================================== */
+
 .badge {
-  display: inline-block;
-  background-color: var(--color-primary);
-  color: var(--color-text-light);
-  padding: 0.4rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  margin-right: 0.5rem;
+  display: inline-block;                        /* Keeps badges side-by-side while allowing block styling */
+  background-color: var(--color-primary);       /* Matches primary color scheme */
+  color: var(--color-text-light);               /* White text for readability */
+  padding: 0.4rem 0.8rem;                       /* Compact internal spacing */
+  border-radius: 20px;                          /* Smooth, rounded pill shape */
+  font-size: 0.85rem;                           /* Slightly smaller than normal text */
+  margin-right: 0.5rem;                         /* Space between badges when in a row */
 }
+
 
 /* ================================== */
 /* CALL TO ACTION                     */
@@ -101,40 +164,69 @@ body {
 
 /* ================================== */
 /* CONTACT FORMS                      */
+/* Styles the layout and appearance of 
+   the contact form section, including 
+   container, fields, and grid alignment. */
 /* ================================== */
+
 .form-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;       
-  justify-content: center;
-  text-align: center;
-  padding: 2rem 0;
+  display: flex;                                /* Enables flexbox layout for vertical alignment */
+  flex-direction: column;                       /* Stacks content (heading + form) vertically */
+  align-items: center;                          /* Centers items horizontally within the section */
+  justify-content: center;                      /* Centers items vertically inside the section */
+  text-align: center;                           /* Centers text like titles or intro text */
+  padding: 2rem 0;                              /* Adds vertical padding for breathing room */
 }
+
+/* ================================== */
+/* FORM CONTAINER                     */
+/* Defines the overall form box, size, 
+   padding, and background styling. */
+/* ================================== */
 
 .form {
-  width: 100%;
-  max-width: 600px;           
-  margin: 0 auto;
-  background-color: #fff;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 100%;                                 /* Allows form to stretch to container width */
+  max-width: 600px;                            /* Restricts width for readability and focus */
+  margin: 0 auto;                              /* Centers the form horizontally within section */
+  background-color: #fff;                      /* White background for strong contrast */
+  padding: 2rem;                               /* Adds inner space around fields */
+  border-radius: 10px;                         /* Rounds the box corners for modern appearance */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);      /* Subtle shadow gives depth to the form */
 }
+
+/* ================================== */
+/* FORM GRID LAYOUT                   */
+/* Sets up spacing and structure for form fields 
+   using CSS Grid for flexibility. */
+/* ================================== */
 
 .form-grid {
-  display: grid;
-  gap: 1.5rem;
+  display: grid;                               /* Enables grid layout for field positioning */
+  gap: 1.5rem;                                 /* Space between form fields vertically and horizontally */
 }
+
+/* ================================== */
+/* FORM FIELD STYLING                 */
+/* Controls layout and text alignment 
+   for each input label and field pair. */
+/* ================================== */
 
 .form-field {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
+  display: flex;                               /* Enables vertical stacking of label and input */
+  flex-direction: column;                      /* Places label above input field */
+  text-align: left;                            /* Aligns text to the left for readability */
 }
 
+/* ================================== */
+/* FULL-WIDTH FORM FIELDS             */
+/* Ensures selected elements (like text areas 
+   or long inputs) span the entire form width. */
+/* ================================== */
+
 .form-field-full {
-  grid-column: 1 / -1;        
+  grid-column: 1 / -1;                         /* Makes the element occupy full grid width */
 }
+
 
 /* ================================== */
 /* DROPDOWNS / MENUS                  */
@@ -143,44 +235,75 @@ body {
 
 /* ================================== */
 /* FOOTER                             */
+/* Controls the bottom section of the page, 
+   including layout, colors, links, and credits. */
 /* ================================== */
+
 .site-footer {
-  background-color: var(--color-primary-dark);
-  color: var(--color-text-light);
-  padding: 2rem 0;
-  margin-top: 3rem;
+  background-color: var(--color-primary-dark);   /* Deep green background consistent with header */
+  color: var(--color-text-light);                /* White text for high contrast and readability */
+  padding: 2rem 0;                               /* Adds vertical spacing inside the footer */
+  margin-top: 3rem;                              /* Creates space above footer separating it from main content */
 }
+
+/* ================================== */
+/* FOOTER GRID LAYOUT                  */
+/* Divides footer content into two equal columns 
+   (e.g., Contact info and Social links). */
+/* ================================== */
 
 .footer-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  justify-items: center;
-  text-align: center;
+  display: grid;                                 /* Uses CSS Grid layout for structured alignment */
+  grid-template-columns: 1fr 1fr;                /* Creates two equal-width columns */
+  gap: 2rem;                                     /* Horizontal and vertical space between columns */
+  justify-items: center;                         /* Centers each grid item horizontally within its cell */
+  text-align: center;                            /* Centers all text within each grid cell */
 }
+
+/* ================================== */
+/* FOOTER LINKS                        */
+/* Styles hyperlinks in the footer section. */
+/* ================================== */
 
 .footer-grid a {
-  color: var(--color-accent);
-  text-decoration: none;
+  color: var(--color-accent);                    /* Bright yellow accent color for visibility */
+  text-decoration: none;                         /* Removes underlines for a clean design */
 }
+
+/* ================================== */
+/* FOOTER LINK HOVER EFFECT            */
+/* Adds a subtle underline on hover for clarity. */
+/* ================================== */
 
 .footer-grid a:hover {
-  text-decoration: underline;
+  text-decoration: underline;                    /* Provides a simple hover indicator for accessibility */
 }
+
+/* ================================== */
+/* COPYRIGHT TEXT                      */
+/* Displays centered copyright notice. */
+/* ================================== */
 
 .copy {
-  grid-column: 1 / -1;
-  text-align: center;
-  margin-top: 1rem;
-  font-size: 0.85rem;
+  grid-column: 1 / -1;                           /* Spans full width across both grid columns */
+  text-align: center;                            /* Centers the copyright line */
+  margin-top: 1rem;                              /* Adds space above for separation */
+  font-size: 0.85rem;                            /* Smaller, non-dominant text size */
 }
 
+/* ================================== */
+/* FOOTER CREDIT LINE                  */
+/* Displays smaller text for project credits 
+   or author acknowledgment at the bottom. */
+/* ================================== */
+
 .credit {
-  text-align: center;
-  font-size: 0.8rem;
-  color: #ddd;
-  margin-top: 1rem;
+  text-align: center;                            /* Centers text horizontally */
+  font-size: 0.8rem;                             /* Slightly smaller font for secondary info */
+  color: #ddd;                                   /* Light gray tone for subdued contrast */
+  margin-top: 1rem;                              /* Adds vertical spacing above the credit line */
 }
+
 
 /* ================================== */
 /* FORMS (INPUTS, LABELS, ETC.)       */
@@ -194,95 +317,168 @@ body {
 
 /* ================================== */
 /* HEADER                             */
+/* Controls the main top section of the site, 
+   including logo, navigation links, and layout. */
 /* ================================== */
+
 .site-header {
-  background-color: var(--color-primary-dark);
-  color: var(--color-text-light);
-  padding: 1rem 0;
+  background-color: var(--color-primary-dark);   /* Deep green background for header */
+  color: var(--color-text-light);                /* White text for readability */
+  padding: 1rem 0;                               /* Adds top and bottom spacing */
 }
+
+/* ================================== */
+/* HEADER ROW LAYOUT                   */
+/* Defines how logo and navigation align in a flex container */
+/* ================================== */
 
 .header-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: flex;                                 /* Uses flexbox for horizontal layout */
+  align-items: center;                           /* Vertically centers items in the header */
+  justify-content: space-between;                /* Pushes logo left, nav links right */
+  flex-wrap: wrap;                               /* Allows wrapping on smaller screens */
 }
 
+/* ================================== */
+/* BRAND / LOGO AREA                   */
+/* Controls site title and logo alignment */
+/* ================================== */
+
 .brand {
-  font-size: 1.75rem;
-  font-weight: 600;
-  text-align: left;
+  font-size: 1.75rem;                            /* Large font size for brand name */
+  font-weight: 600;                              /* Bold for visual emphasis */
+  text-align: left;                              /* Aligns logo/title text to the left */
 }
+
+/* ================================== */
+/* NAVIGATION MENU                     */
+/* Controls positioning of navigation links */
+/* ================================== */
 
 .nav {
-  text-align: right;
+  text-align: right;                             /* Aligns all nav links to the right */
 }
+
+/* ================================== */
+/* NAVIGATION LINKS                    */
+/* Styles for links inside the navigation bar */
+/* ================================== */
 
 .nav a {
-  color: var(--color-text-light);
-  text-decoration: none;
-  margin-left: 1rem;
-  font-weight: 500;
+  color: var(--color-text-light);                /* White links for contrast on dark background */
+  text-decoration: none;                         /* Removes underline for cleaner look */
+  margin-left: 1rem;                             /* Spacing between each link */
+  font-weight: 500;                              /* Medium font weight for legibility */
 }
+
+/* ================================== */
+/* NAVIGATION LINK HOVER STATE         */
+/* Color change effect when hovering links */
+/* ================================== */
 
 .nav a:hover {
-  color: var(--color-accent);
+  color: var(--color-accent);                    /* Bright accent color for hover feedback */
 }
+
+/* ================================== */
+/* BRAND FLEX LAYOUT                   */
+/* Ensures logo image and text align side by side */
+/* ================================== */
+
 .brand {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;           
+  display: flex;                                 /* Enables side-by-side alignment */
+  align-items: center;                           /* Vertically centers logo and text */
+  gap: 0.75rem;                                  /* Space between logo image and title */
 }
+
+/* ================================== */
+/* BRAND LOGO IMAGE                    */
+/* Controls size and display of the logo graphic */
+/* ================================== */
 
 .brand img.logo {
-  height: 50px;           
-  width: auto;
-  display: block;
+  height: 50px;                                  /* Fixed height for logo consistency */
+  width: auto;                                   /* Maintains aspect ratio */
+  display: block;                                /* Removes inline spacing under the image */
 }
 
+/* ================================== */
+/* BRAND TITLE TEXT                    */
+/* Styles the site name next to the logo */
+/* ================================== */
+
 .brand h1 {
-  margin: 0;
-  font-size: 1.75rem;
-  font-weight: 600;
-  color: var(--color-text-light);
+  margin: 0;                                     /* Removes default heading margin */
+  font-size: 1.75rem;                            /* Matches text size of brand container */
+  font-weight: 600;                              /* Keeps heading visually strong */
+  color: var(--color-text-light);                /* Ensures good contrast against dark header */
 }
+
 
 
 /* ================================== */
 /* HERO SECTION                       */
+/* Styles the top “hero” banner area of 
+   the page, including the background, 
+   image, title, and introductory text. */
 /* ================================== */
+
 .hero {
-  position: relative;
-  margin-top: 1rem;
-  background-color: var(--color-primary-light);
-  border-radius: 10px;
-  overflow: hidden;
-  text-align: center; 
+  position: relative;                           /* Positions elements like overlays relative to this container */
+  margin-top: 1rem;                             /* Adds space between the header and the hero section */
+  background-color: var(--color-primary-light); /* Soft background color that complements site theme */
+  border-radius: 10px;                          /* Slightly rounded corners for a smooth, modern look */
+  overflow: hidden;                             /* Ensures child elements don’t spill outside rounded edges */
+  text-align: center;                           /* Centers hero text and elements horizontally */
 }
+
+/* ================================== */
+/* HERO IMAGE                          */
+/* Controls the main banner or featured 
+   image that spans the hero section. */
+/* ================================== */
 
 .hero-img {
-  width: 100%;
-  height: auto;
-  display: block;
+  width: 100%;                                  /* Image stretches full width of container */
+  height: auto;                                 /* Maintains natural aspect ratio */
+  display: block;                               /* Removes unwanted gaps below the image */
 }
+
+/* ================================== */
+/* HERO TEXT CONTAINER (COPY AREA)     */
+/* Holds the heading and paragraph inside 
+   the hero section and controls padding and width. */
+/* ================================== */
 
 .hero-copy {
-  padding: 2rem;
-  max-width: 800px;
-  margin: 0 auto;
+  padding: 2rem;                                /* Adds space inside the text area */
+  max-width: 800px;                             /* Restricts line width for optimal readability */
+  margin: 0 auto;                               /* Centers the text block within the hero section */
 }
+
+/* ================================== */
+/* HERO TITLE / HEADING                */
+/* Large heading that introduces the section */
+/* ================================== */
 
 .hero-title {
-  color: var(--color-primary-dark);
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  color: var(--color-primary-dark);             /* Uses the darker primary color for strong contrast */
+  font-size: 2rem;                              /* Large, eye-catching font size for headline */
+  margin-bottom: 1rem;                          /* Adds space between the heading and following text */
 }
 
+/* ================================== */
+/* HERO PARAGRAPH TEXT                 */
+/* Styles the paragraph under the title 
+   for readable and balanced presentation. */
+/* ================================== */
+
 .hero-text {
-  text-align: left; 
-  margin: 1rem auto;
-  max-width: 700px;
+  text-align: left;                             /* Aligns paragraph text to the left for readability */
+  margin: 1rem auto;                            /* Adds vertical spacing and centers the text block */
+  max-width: 700px;                             /* Restricts text width for improved legibility */
 }
+
 
 /* ================================== */
 /* IMAGES                             */
@@ -302,47 +498,85 @@ body {
 /* ================================== */
 /* MAIN CONTENT / SECTIONS            */
 /* ================================== */
+/* ================================== */
+/* FEATURED PRODUCE SECTION            */
+/* Controls layout and styling for the
+   featured produce area on the homepage */
+/* ================================== */
+
 .featured-produce {
-  padding: 3rem 0;
+  padding: 3rem 0; /* Adds vertical space above and below the section */
 }
+
+/* ================================== */
+/* SECTION TITLE STYLING               */
+/* Used for titles like “Featured Produce” */
+/* ================================== */
 
 .section-title {
-  text-align: center;
-  color: var(--color-primary-dark);
-  margin-bottom: 2rem;
+  text-align: center;               /* Centers the section heading text */
+  color: var(--color-primary-dark); /* Uses the dark primary theme color */
+  margin-bottom: 2rem;              /* Adds space below the heading */
 }
+
+/* ================================== */
+/* PRODUCE GRID LAYOUT                 */
+/* Arranges product cards in equal columns */
+/* ================================== */
 
 .produce-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 2rem;
-  justify-items: center;
+  display: grid;                                 /* Enables CSS Grid layout */
+  grid-template-columns: 1fr 1fr 1fr;            /* Three equal-width columns */
+  gap: 2rem;                                     /* Space between grid items */
+  justify-items: center;                         /* Centers each grid item horizontally */
 }
+
+/* ================================== */
+/* INDIVIDUAL PRODUCE ITEM BOXES       */
+/* Styles for each product card in the grid */
+/* ================================== */
 
 .produce-item {
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  text-align: center;
-  padding: 1rem;
-  transition: transform 0.2s ease;
-  width: 100%;
-  max-width: 320px;
+  background-color: #fff;                        /* White card background */
+  border-radius: 12px;                           /* Rounded corners for softer look */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);        /* Subtle shadow for depth */
+  text-align: center;                            /* Centers text within the card */
+  padding: 1rem;                                 /* Internal spacing inside each card */
+  transition: transform 0.2s ease;               /* Smooth animation when hovering or scaling */
+  width: 100%;                                   /* Allows flexible width in grid cells */
+  max-width: 320px;                              /* Ensures cards don’t grow too wide */
 }
 
+/* ================================== */
+/* PRODUCE IMAGE STYLING               */
+/* Controls images inside product cards */
+/* ================================== */
 
 .produce-img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 10px;
-  display: block;
+  width: 100%;                                   /* Image fills the card width */
+  aspect-ratio: 1 / 1;                           /* Ensures square proportions */
+  object-fit: cover;                             /* Crops image without distortion */
+  border-radius: 10px;                           /* Matches card corner rounding */
+  display: block;                                /* Removes small inline spacing below images */
 }
 
+/* ================================== */
+/* PRODUCE NAME TEXT                   */
+/* Styles the product name under each image */
+/* ================================== */
+
 .produce-name {
-  color: var(--color-primary-dark);
-  margin-top: 1rem;
-  font-size: 1.25rem;
+  color: var(--color-primary-dark);              /* Dark green for readability */
+  margin-top: 1rem;                              /* Adds space above the text */
+  font-size: 1.25rem;                            /* Medium-large font for prominence */
+}
+
+
+/* Remove bullets from the timeline list */
+.timeline {
+  list-style-type: none;   /* Removes the bullet points */
+  margin: 0;               /* Removes default top/bottom spacing */
+  padding: 0;              /* Removes left indentation */
 }
 
 
@@ -373,19 +607,43 @@ body {
 
 /* ================================== */
 /* RESPONSIVE DESIGN (MEDIA QUERIES)  */
+/* Adjusts layout and text alignment for
+   smaller screens and mobile devices 
+   to maintain readability and usability. */
 /* ================================== */
+
+/* Applies styles only when the viewport width 
+   is 768px or less (typical tablet or phone size). */
 @media (max-width: 768px) {
+
+  /* =============================== */
+  /* HEADER ROW ADJUSTMENTS           */
+  /* Stacks logo and navigation vertically 
+     and centers them for better visibility. */
+  /* =============================== */
   .header-row {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: column;         /* Changes layout from row to column */
+    text-align: center;             /* Centers text when stacked vertically */
   }
 
+  /* =============================== */
+  /* NAVIGATION ADJUSTMENTS           */
+  /* Adds spacing above nav links to 
+     separate them from the logo area. */
+  /* =============================== */
   .nav {
-    margin-top: 1rem;
+    margin-top: 1rem;               /* Adds top space between brand and links */
   }
 
+  /* =============================== */
+  /* HERO TEXT ALIGNMENT              */
+  /* Centers the hero text block on 
+     smaller screens for better readability. */
+  /* =============================== */
   .hero-text {
-    text-align: center;
+    text-align: center;             /* Centers hero section text on mobile */
   }
 }
-}
+
+
+
