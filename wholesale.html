@@ -1,278 +1,203 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Wholesale — Your Brand</title>
-  <link rel="stylesheet" href="/css/styles.css" />
-</head>
-<body>
-  <header>
-    <div class="container">
-      <nav aria-label="Main">
-        <ul class="navbar">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a aria-current="page" href="wholesale.html">Wholesale</a></li>
-          <li><a href="retail.html">Retail</a></li>
-          <li><a href="contact.html">Contact</a></li>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wholesale - Trellis Farm and Flowers</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script type="module" src="assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-row">
+        <div class="brand">
+          <img
+            src="assets/images/trellis-logo.png"
+            alt="Utah Farms and Flowers logo"
+            class="logo"
+          />
+          <h1>Utah Farms &amp; Flowers</h1>
+        </div>
+
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="index.html">Produce</a>
+          <a href="wholesale.html" aria-current="page">Wholesale</a>
+          <a href="retail.html">Retail</a>
+          <a href="contact.html">Contact</a>
+          <a href="about.html">About</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="app" class="container">
+      <section class="hero section">
+        <h2 class="section-title">Wholesale Program</h2>
+        <p class="lead">
+          Reliable, consistent, and locally grown — our wholesale produce is
+          available for restaurants, grocers, caterers, and distributors
+          throughout Utah.
+        </p>
+        <p>
+          We provide weekly harvest availability lists, flexible minimum order
+          quantities, and dedicated service for business customers. Partner with
+          us to ensure your supply chain stays fresh and dependable.
+        </p>
+      </section>
+
+      <section class="section" id="benefits">
+        <h3 class="section-title">Why Partner With Us?</h3>
+        <ul class="feature-list">
+          <li>
+            <strong>Consistent Quality:</strong> All produce is harvested and
+            packed the same day for superior freshness and shelf life.
+          </li>
+          <li>
+            <strong>Flexible Volume:</strong> Start small and scale as your
+            demand grows.
+          </li>
+          <li>
+            <strong>On-Time Delivery:</strong> Coordinated delivery schedules
+            and pickup options available.
+          </li>
         </ul>
-      </nav>
-      <p class="breadcrumb"><a href="index.html">Home</a> / Wholesale</p>
-    </div>
-  </header>
+      </section>
 
-  <main id="main-content">
-    <!-- Hero -->
-    <section class="hero section" id="top">
-      <div class="container">
-        <p class="kicker">Wholesale Program</p>
-        <h1>Fresh, Reliable Supply for Trade Buyers</h1>
-        <p class="lede">Grocers, restaurants, and distributors get clear terms, consistent quality, and dependable fulfillment.</p>
-        <div class="actions">
-          <a class="button primary" href="#apply">Apply for Account</a>
-          <a class="button secondary" href="#catalog">View Sample Catalog</a>
-        </div>
-      </div>
-    </section>
+      <section class="section" id="tiers">
+        <h3 class="section-title">Wholesale Pricing Tiers</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Tier</th>
+              <th>Weekly Volume</th>
+              <th>Discount Range</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Starter</td>
+              <td>25–99 units</td>
+              <td>5–8% off retail</td>
+              <td>Great for seasonal menus and small businesses</td>
+            </tr>
+            <tr>
+              <td>Core</td>
+              <td>100–299 units</td>
+              <td>9–14% off retail</td>
+              <td>Ideal for restaurants and grocery partners</td>
+            </tr>
+            <tr>
+              <td>Partner</td>
+              <td>300+ units</td>
+              <td>15–22% off retail</td>
+              <td>Contracted pricing and logistics support</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
 
-    <!-- Value props -->
-    <section class="section" id="benefits">
-      <div class="container grid cols-3">
-        <article class="card">
-          <h2>Consistent Quality</h2>
-          <p>Standardized grading and handling for predictable shelf life and prep yield.</p>
-        </article>
-        <article class="card">
-          <h2>Flexible MOQs</h2>
-          <p>Scale from pilot volumes to contracted supply without disrupting service.</p>
-        </article>
-        <article class="card">
-          <h2>On-Time Logistics</h2>
-          <p>Dock pickup or delivery routes coordinated to your receiving windows.</p>
-        </article>
-      </div>
-    </section>
+      <section class="section" id="apply">
+        <h3 class="section-title">Apply for a Wholesale Account</h3>
+        <p>
+          Fill out the form below to begin the application process. Once we
+          receive your information, we’ll send you a current catalog and
+          discuss pricing, delivery, and account setup.
+        </p>
 
-    <!-- Pricing tiers -->
-    <section class="section" id="tiers" aria-labelledby="tier-heading">
-      <div class="container">
-        <h2 id="tier-heading">Wholesale Pricing Tiers</h2>
-        <div class="card table-wrapper">
-          <table class="table" aria-describedby="tier-heading">
-            <thead>
-              <tr>
-                <th scope="col">Tier</th>
-                <th scope="col">Weekly Volume</th>
-                <th scope="col">Discount Range</th>
-                <th scope="col">Notes</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Starter</strong></td>
-                <td>25 to 99 units / week</td>
-                <td>5 to 8% off retail</td>
-                <td>Ideal for pilots and seasonal menus</td>
-              </tr>
-              <tr>
-                <td><strong>Core</strong></td>
-                <td>100 to 299 units / week</td>
-                <td>9 to 14% off retail</td>
-                <td>Best for independent grocers & cafés</td>
-              </tr>
-              <tr>
-                <td><strong>Partner</strong></td>
-                <td>300+ units / week</td>
-                <td>15 to 22% off retail</td>
-                <td>Contracted pricing; route priority</td>
-              </tr>
-            </tbody>
-          </table>
-          <p class="note">Indicative only — request a quote for current pricing and pack lists.</p>
-        </div>
-      </div>
-    </section>
+        <form id="wholesale-form" class="form" action="#" method="post">
+          <fieldset>
+            <legend class="sr-only">Wholesale Application</legend>
 
-    <!-- How ordering works -->
-    <section class="section" id="ordering" aria-labelledby="ordering-heading">
-      <div class="container split">
-        <div>
-          <h2 id="ordering-heading">How Ordering Works</h2>
-          <ol class="steps">
-            <li><strong>Account setup:</strong> Submit business details and resale documentation.</li>
-            <li><strong>Catalog & availability:</strong> Receive weekly list with SKUs, grades, and packs.</li>
-            <li><strong>Place orders:</strong> Order by cutoff; allocations confirmed within 12 to 24 hours.</li>
-            <li><strong>Fulfillment:</strong> Delivery on route days or scheduled dock pickup.</li>
-            <li><strong>Payment:</strong> Net terms eligible after first order; otherwise due on receipt.</li>
-          </ol>
-          <ul class="list-check">
-            <li>EDI/CSV ordering available</li>
-            <li>Case labeling with lot/harvest dates</li>
-            <li>Temperature-controlled handling where applicable</li>
-          </ul>
-        </div>
-        <aside class="card">
-          <h3>MOQs & Lead Times</h3>
-          <dl class="kv">
-            <dt>Minimum Order</dt><dd>1 case per SKU (mixed cases by request)</dd>
-            <dt>Weekly Cutoff</dt><dd>Tue 3:00 PM for Thu/Sat fulfillment</dd>
-            <dt>Lead Time</dt><dd>48 to 72 hours by item and pack</dd>
-            <dt>Private Label</dt><dd>Available at Partner tier with approved specs</dd>
-          </dl>
-        </aside>
-      </div>
-    </section>
-
-    <!-- Sample catalog -->
-    <section class="section" id="catalog" aria-labelledby="catalog-heading">
-      <div class="container">
-        <h2 id="catalog-heading">Sample Catalog</h2>
-        <div class="grid cols-3">
-          <article class="card">
-            <h3>Leafy Mix — 1 lb clamshell</h3>
-            <p>Washed & ready; consistent cut and texture.</p>
-          </article>
-          <article class="card">
-            <h3>Tomato — 10 lb case</h3>
-            <p>Uniform sizing for efficient prep.</p>
-          </article>
-          <article class="card">
-            <h3>Herb Bundle — 12 ct</h3>
-            <p>High aroma, trimmed stems; label-ready.</p>
-          </article>
-        </div>
-        <p class="muted">Request the current catalog for full SKU list, grades, and pack sizes.</p>
-      </div>
-    </section>
-
-    <!-- Payment & terms -->
-    <section class="section" id="terms" aria-labelledby="terms-heading">
-      <div class="container">
-        <h2 id="terms-heading">Payment & Terms</h2>
-        <ul class="bullets">
-          <li><strong>Methods:</strong> ACH, card, or check. Net-15/Net-30 on approval.</li>
-          <li><strong>Claims:</strong> Report within 24 hours with photos and lot labels.</li>
-          <li><strong>Returns:</strong> Perishable goods policy; RA required.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Application form -->
-    <section class="section" id="apply" aria-labelledby="apply-heading">
-      <div class="container split">
-        <div>
-          <h2 id="apply-heading">Apply for a Wholesale Account</h2>
-          <p class="muted">Share your business details and estimated volumes. We will respond with pricing, routes, and next steps.</p>
-
-          <form action="/forms/wholesale-apply" method="post">
-            <label for="bizname">Business Name</label>
-            <input id="bizname" name="business_name" type="text" required />
-
-            <label for="contact">Contact Name</label>
-            <input id="contact" name="contact_name" type="text" required />
-
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" required />
-
-            <label for="phone">Phone</label>
-            <input id="phone" name="phone" type="tel" />
-
-            <label for="type">Business Type</label>
-            <select id="type" name="business_type" required>
-              <option value="">Select…</option>
-              <option>Restaurant / Café</option>
-              <option>Grocery / Market</option>
-              <option>Meal Prep / Catering</option>
-              <option>Distributor</option>
-              <option>Other</option>
-            </select>
-
-            <label for="volume">Estimated Weekly Volume</label>
-            <input id="volume" name="weekly_volume" type="text" placeholder="e.g., 120 units / week" />
-
-            <label for="message">Notes</label>
-            <textarea id="message" name="notes" rows="5" placeholder="SKUs of interest, pack sizes, delivery windows, etc."></textarea>
-
-            <div class="actions">
-              <button class="button primary" type="submit">Submit Application</button>
-              <a class="button secondary" href="retail.html">Shop Retail Instead</a>
+            <div class="form-field">
+              <label for="bizname">Business Name</label>
+              <input
+                id="bizname"
+                name="business_name"
+                type="text"
+                required
+              />
             </div>
-          </form>
+
+            <div class="form-field">
+              <label for="contact">Contact Name</label>
+              <input id="contact" name="contact_name" type="text" required />
+            </div>
+
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required />
+            </div>
+
+            <div class="form-field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" />
+            </div>
+
+            <div class="form-field">
+              <label for="volume">Estimated Weekly Volume</label>
+              <input
+                id="volume"
+                name="weekly_volume"
+                type="text"
+                placeholder="e.g., 100 units"
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="message">Notes / Products of Interest</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Describe what products or volumes you're interested in..."
+              ></textarea>
+            </div>
+
+            <div class="form-field">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+
+    <footer id="site-footer" class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <h4>Contact Us</h4>
+          <p>
+            Email:
+            <a href="mailto:orders@trellisfarmandflowers.example"
+              >orders@trellisfarmandflowers.example</a
+            ><br />
+            Bluffdale, UT 84065
+          </p>
         </div>
 
-        <aside class="card">
-          <h3>Need Help?</h3>
-          <p>Prefer email? Write to <a href="mailto:wholesale@yourbrand.com">wholesale@yourbrand.com</a>.</p>
-          <p>Call receiving: <a href="tel:+18005551234">(800) 555-1234</a></p>
-          <p>Office hours: Mon to Fri, 9am to 5pm.</p>
-        </aside>
-      </div>
-    </section>
+        <div>
+          <h4>Follow Us</h4>
+          <p>
+            <a href="#" aria-label="Facebook">Facebook</a><br />
+            <a href="#" aria-label="Instagram">Instagram</a><br />
+            <a href="#" aria-label="Twitter">Twitter</a><br />
+            <a href="#" aria-label="TikTok">TikTok</a><br />
+            <a href="#" aria-label="Pinterest">Pinterest</a><br />
+            <a href="#" aria-label="YouTube">YouTube</a><br />
+            <a href="#" aria-label="LinkedIn">LinkedIn</a><br />
+            <a href="#" aria-label="Yelp">Yelp</a>
+          </p>
+        </div>
 
-    <!-- FAQ -->
-    <section class="section" id="faq" aria-labelledby="faq-heading">
-      <div class="container">
-        <h2 id="faq-heading">Wholesale FAQ</h2>
-        <details class="card">
-          <summary><strong>Can I mix cases?</strong></summary>
-          <p>Yes—mixed cases are available on most SKUs, subject to pack compatibility.</p>
-        </details>
-        <details class="card">
-          <summary><strong>Do you offer samples?</strong></summary>
-          <p>Starter tier includes sample eligibility. Tell us which items you would like to evaluate.</p>
-        </details>
-        <details class="card">
-          <summary><strong>What about private label?</strong></summary>
-          <p>Partner tier customers can request private label with approved packaging specs and MOQs.</p>
-        </details>
-      </div>
-    </section>
-  </main>
-<footer id="contact" class="site-footer">
-  <div class="container footer-grid">
-    <div>
-      <h4>Contact Us</h4>
-      <p>
-        Email:
-        <a href="mailto:orders@Utahfarmandflowers.email">
-          order@trellisfarmandflowers.example
-        </a>
-        <br />
-        Bluffdale, UT 84065
-      </p>
-    </div>
-    <div>
-      <h4>Follow Us</h4>
-      <p>
-        <a href="#" aria-label="Utah Farm and Flowers on Facebook">Facebook</a>
-        <br />
-        <a href="#" aria-label="Utah Farm and Flowers on Instagram">Instagram</a>
-        <br />
-        <a href="#" aria-label="Utah Farm and Flowers on Twitter">Twitter</a>
-        <br />
-        <a href="#" aria-label="Utah Farm and Flowers on TikTok">TikTok</a>
-        <a href="#" aria-label="Utah Farm and Flowers on Pinterest">Pinterest</a>
-        <br />
-        <a href="#" aria-label="Utah Farm and Flowers on YouTube">YouTube</a>
-        <br />
-        <a href="#" aria-label="Utah Farm and Flowers on LinkedIn">LinkedIn</a>
-        <br />
-        <a href="#" aria-label="Utah Farm and Flowers on Yelp">Yelp</a>
-      </p>
-    </div>
-    
-
-
-      <!-- Branding and copyright -->
-       <div class="copy">
-        <small>&copy; <span id="year"></span> Utah Farm and Flowers. All rights reserved.</small>
-       </div>
+        <div class="copy">
+          <small
+            >&copy; <span id="year"></span> Utah Farm and Flowers. All rights
+            reserved.</small
+          >
+        </div>
       </div>
 
       <p class="credit">WDD231 Final Project by Sully and Lora</p>
-    </div>
     </footer>
-  
-</body>
+  </body>
 </html>
+
