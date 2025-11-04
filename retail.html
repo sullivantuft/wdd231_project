@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retail - Trellis Farm and Flowers</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script type="module" src="assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-row">
+        <div class="brand">
+          <img
+            src="assets/images/trellis-logo.png"
+            alt="Utah Farms and Flowers logo"
+            class="logo"
+          />
+          <h1>Utah Farms &amp; Flowers</h1>
+        </div>
+
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="index.html">Home</a>
+          <a href="wholesale.html">Wholesale</a>
+          <a href="retail.html" aria-current="page">Retail</a>
+          <a href="contact.html">Contact</a>
+          <a href="about.html">About</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="app" class="container">
+      <section class="hero section">
+        <h2 class="section-title">Retail Store</h2>
+        <p class="lead">
+          Welcome to our retail section — where you can enjoy fresh,
+          locally-grown produce direct from our farm. Whether you’re shopping
+          for your family, planning a special meal, or simply craving the
+          highest-quality greens and herbs, you’ll find it here.
+        </p>
+        <p>
+          We proudly serve the community through local farmers markets,
+          subscription boxes, and limited in-store pickup. All our produce is
+          harvested daily for maximum freshness and flavor.
+        </p>
+      </section>
+
+      <section class="section" id="retail-options">
+        <h3 class="section-title">Ways to Shop</h3>
+        <ul class="feature-list">
+          <li>
+            <strong>Farm Stand:</strong> Visit our Bluffdale location for
+            walk-in purchases every Thursday and Saturday morning.
+          </li>
+          <li>
+            <strong>Farmers Markets:</strong> Find us weekly at the
+            <em>Downtown SLC</em> and <em>Provo</em> markets.
+          </li>
+          <li>
+            <strong>Produce Boxes:</strong> Subscribe to our seasonal CSA box
+            for weekly fresh deliveries.
+          </li>
+        </ul>
+      </section>
+
+      <section class="section" id="featured-products">
+        <h3 class="section-title">Featured Products</h3>
+        <div class="product-grid">
+          <article class="card">
+            <img
+              src="assets/images/lettuce.jpg"
+              alt="Fresh Butterhead Lettuce"
+            />
+            <h4>Butterhead Lettuce</h4>
+            <p>Crisp, tender leaves — perfect for wraps and salads.</p>
+            <p><strong>$3.00 / head</strong></p>
+          </article>
+
+          <article class="card">
+            <img src="assets/images/basil.jpg" alt="Fresh Basil" />
+            <h4>Sweet Basil</h4>
+            <p>Hand-picked and aromatic. Ideal for sauces and garnishes.</p>
+            <p><strong>$4.00 / bunch</strong></p>
+          </article>
+
+          <article class="card">
+            <img src="assets/images/tomatoes.jpg" alt="Cherry Tomatoes" />
+            <h4>Cherry Tomatoes</h4>
+            <p>Bright and juicy — perfect for snacking or salads.</p>
+            <p><strong>$5.00 / pint</strong></p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="subscribe">
+        <h3 class="section-title">Join Our CSA Program</h3>
+        <p>
+          Receive a weekly box of freshly harvested produce straight from our
+          towers to your table. Each box includes a seasonal selection of
+          greens, herbs, and vegetables — all grown sustainably right here in
+          Utah.
+        </p>
+
+        <form id="subscribe-form" class="form" action="#" method="post">
+          <fieldset>
+            <legend class="sr-only">CSA Subscription Form</legend>
+
+            <div class="form-field">
+              <label for="name">Full Name</label>
+              <input id="name" name="name" type="text" required />
+            </div>
+
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required />
+            </div>
+
+            <div class="form-field">
+              <label for="plan">Subscription Plan</label>
+              <select id="plan" name="plan" required>
+                <option value="" disabled selected>Select a plan</option>
+                <option value="weekly">Weekly Box</option>
+                <option value="biweekly">Bi-Weekly Box</option>
+                <option value="monthly">Monthly Box</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="notes">Notes</label>
+              <textarea
+                id="notes"
+                name="notes"
+                rows="4"
+                placeholder="Any special requests?"
+              ></textarea>
+            </div>
+
+            <div class="form-field">
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </div>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+
+    <footer id="site-footer" class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <h4>Contact Us</h4>
+          <p>
+            Email:
+            <a href="mailto:orders@trellisfarmandflowers.example"
+              >orders@utahfarmandflowers.example</a
+            ><br />
+            Bluffdale, UT 84065
+          </p>
+        </div>
+
+        <div>
+          <h4>Follow Us</h4>
+          <p>
+            <a href="#" aria-label="Facebook">Facebook</a><br />
+            <a href="#" aria-label="Instagram">Instagram</a><br />
+            <a href="#" aria-label="Twitter">Twitter</a><br />
+            <a href="#" aria-label="TikTok">TikTok</a><br />
+            <a href="#" aria-label="Pinterest">Pinterest</a><br />
+            <a href="#" aria-label="YouTube">YouTube</a><br />
+            <a href="#" aria-label="LinkedIn">LinkedIn</a><br />
+            <a href="#" aria-label="Yelp">Yelp</a>
+          </p>
+        </div>
+
+        <div class="copy">
+          <small
+            >&copy; <span id="year"></span> Utah Farm and Flowers. All rights
+            reserved.</small
+          >
+        </div>
+      </div>
+
+      <p class="credit">WDD231 Final Project by Sully and Lora</p>
+    </footer>
+  </body>
+</html>
