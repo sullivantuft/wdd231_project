@@ -56,18 +56,34 @@
                 </div>
                 </div>
 
-                <div class="shop-item">
-                <button class="shop-toggle"><strong>Farmers Markets</strong></button>
-                <div class="shop-panel">
-                    Find us weekly at the <em>Downtown SLC</em> and <em>Provo</em> markets.
-                </div>
-                </div>
-
-                <div class="shop-item">
-                <button class="shop-toggle"><strong>Produce Boxes</strong></button>
-                <div class="shop-panel">
-                    Subscribe to our seasonal CSA box for weekly fresh deliveries.
+               <div class="shop-item">
+                    <button class="shop-toggle"
+                            aria-expanded="false"
+                            aria-controls="farmers-markets-panel">
+                        <strong>Farmers Markets</strong>
+                    </button>
+                    <div class="shop-panel"
+                        id="farmers-markets-panel"
+                        role="region"
+                        aria-hidden="true">
+                        Find us weekly at the <em>Downtown SLC</em> and <em>Provo</em> markets.
                     </div>
+                    </div>
+
+                    <div class="shop-item">
+                    <button class="shop-toggle"
+                            aria-expanded="false"
+                            aria-controls="produce-boxes-panel">
+                        <strong>Produce Boxes</strong>
+                    </button>
+                    <div class="shop-panel"
+                        id="produce-boxes-panel"
+                        role="region"
+                        aria-hidden="true">
+                        Subscribe to our seasonal CSA box for weekly fresh deliveries.
+                    </div>
+                    </div>
+
                 </div>
             </div>
             </section>
