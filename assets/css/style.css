@@ -29,7 +29,22 @@
 /* ================================== */
 /* ANIMATIONS / TRANSITIONS           */
 /* ================================== */
+:root {
+  --easing-standard: cubic-bezier(0.2,0.6,0.2,1); /* Smooth easing curve for transitions */
+  --easing-emphasis: cubic-bezier(0.2,0.8,0.2,1); /* Snappier feel */
+  --duration-fast: 150ms;                     /* Quick transition duration */
+  --duration-standard: 250ms;                 /* Standard transition duration */
+  --duration-slow: 450ms;                     /* Slower transition duration */
+}
 
+/* Accessibility rule: disable motion for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce){      /* Checks if the user's OS/browser setting prefers reduced motion */
+  * {                                         /* Targets all elements on the page */ 
+    animation: none !important;               /* Disables all CSS animations */
+    transition: none !important;              /* Disables all CSS transitions */
+    scroll-behavior: auto !important;         /* Disables smooth scrolling behavior */
+  }
+}
 
 /* ================================== */
 /* BODY                               */
@@ -59,7 +74,7 @@ body {
   margin: 0;                                    /* Removes default browser margin */
   line-height: 1.6;                             /* Improves text readability with balanced spacing */
   text-align: center;                           /* Centers text globally (can be overridden later) */
-}                                                /* ✅ Added missing closing brace */
+}                                                
 
 /* ================================== */
 /* PAGE CONTAINER                      */
@@ -185,12 +200,12 @@ body {
 /* ================================== */
 
 .form {
-  width: 100%;                                 /* Allows form to stretch to container width */
-  max-width: 600px;                            /* Restricts width for readability and focus */
-  margin: 0 auto;                              /* Centers the form horizontally within section */
+  width: 100%;                                   /* Allows form to stretch to container width */
+  max-width: 600px;                              /* Restricts width for readability and focus */
+  margin: 0 auto;                                /* Centers the form horizontally within section */
   background-color: #fff;                      /* White background for strong contrast */
-  padding: 2rem;                               /* Adds inner space around fields */
-  border-radius: 10px;                         /* Rounds the box corners for modern appearance */
+  padding: 2rem;                                 /* Adds inner space around fields */
+  border-radius: 10px;                           /* Rounds the box corners for modern appearance */
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);      /* Subtle shadow gives depth to the form */
 }
 
@@ -300,7 +315,7 @@ body {
 .credit {
   text-align: center;                            /* Centers text horizontally */
   font-size: 0.8rem;                             /* Slightly smaller font for secondary info */
-  color: #ddd;                                   /* Light gray tone for subdued contrast */
+  color: #ddd;                                 /* Light gray tone for subdued contrast */
   margin-top: 1rem;                              /* Adds vertical spacing above the credit line */
 }
 
@@ -327,10 +342,10 @@ body {
   padding: 1rem 0;                               /* Adds top and bottom spacing */
 }
 
-/* ================================== */
-/* HEADER ROW LAYOUT                   */
+/* ========================================================= */
+/* HEADER ROW LAYOUT                                         */
 /* Defines how logo and navigation align in a flex container */
-/* ================================== */
+/* ========================================================= */
 
 .header-row {
   display: flex;                                 /* Uses flexbox for horizontal layout */
@@ -380,10 +395,10 @@ body {
   color: var(--color-accent);                    /* Bright accent color for hover feedback */
 }
 
-/* ================================== */
-/* BRAND FLEX LAYOUT                   */
+/* ============================================== */
+/* BRAND FLEX LAYOUT                              */
 /* Ensures logo image and text align side by side */
-/* ================================== */
+/* ===============================================*/
 
 .brand {
   display: flex;                                 /* Enables side-by-side alignment */
@@ -391,10 +406,10 @@ body {
   gap: 0.75rem;                                  /* Space between logo image and title */
 }
 
-/* ================================== */
-/* BRAND LOGO IMAGE                    */
+/* ============================================= */
+/* BRAND LOGO IMAGE                              */
 /* Controls size and display of the logo graphic */
-/* ================================== */
+/* ==============================================*/
 
 .brand img.logo {
   height: 50px;                                  /* Fixed height for logo consistency */
@@ -402,10 +417,10 @@ body {
   display: block;                                /* Removes inline spacing under the image */
 }
 
-/* ================================== */
-/* BRAND TITLE TEXT                    */
-/* Styles the site name next to the logo */
-/* ================================== */
+/* ====================================== */
+/* BRAND TITLE TEXT                       */
+/* Styles the site name next to the logo  */
+/* =======================================*/
 
 .brand h1 {
   margin: 0;                                     /* Removes default heading margin */
@@ -416,12 +431,12 @@ body {
 
 
 
-/* ================================== */
-/* HERO SECTION                       */
+/* ====================================== */
+/* HERO SECTION                           */
 /* Styles the top “hero” banner area of 
    the page, including the background, 
-   image, title, and introductory text. */
-/* ================================== */
+   image, title, and introductory text.   */
+/* ====================================== */
 
 .hero {
   position: relative;                           /* Positions elements like overlays relative to this container */
@@ -432,11 +447,11 @@ body {
   text-align: center;                           /* Centers hero text and elements horizontally */
 }
 
-/* ================================== */
-/* HERO IMAGE                          */
+/* ===================================== */
+/* HERO IMAGE                            */
 /* Controls the main banner or featured 
-   image that spans the hero section. */
-/* ================================== */
+   image that spans the hero section.    */
+/* ======================================*/
 
 .hero-img {
   width: 100%;                                  /* Image stretches full width of container */
@@ -444,8 +459,8 @@ body {
   display: block;                               /* Removes unwanted gaps below the image */
 }
 
-/* ================================== */
-/* HERO TEXT CONTAINER (COPY AREA)     */
+/* ====================================== */
+/* HERO TEXT CONTAINER (COPY AREA)        */
 /* Holds the heading and paragraph inside 
    the hero section and controls padding and width. */
 /* ================================== */
@@ -505,7 +520,7 @@ body {
 /* ================================== */
 
 .featured-produce {
-  padding: 3rem 0; /* Adds vertical space above and below the section */
+  padding: 3rem 0;                              /* Adds vertical space above and below the section */
 }
 
 /* ================================== */
@@ -514,9 +529,9 @@ body {
 /* ================================== */
 
 .section-title {
-  text-align: center;               /* Centers the section heading text */
-  color: var(--color-primary-dark); /* Uses the dark primary theme color */
-  margin-bottom: 2rem;              /* Adds space below the heading */
+  text-align: center;                         /* Centers the section heading text */
+  color: var(--color-primary-dark);           /* Uses the dark primary theme color */
+  margin-bottom: 2rem;                        /* Adds space below the heading */
 }
 
 /* ================================== */
@@ -538,13 +553,13 @@ body {
 
 .produce-item {
   background-color: #fff;                        /* White card background */
-  border-radius: 12px;                           /* Rounded corners for softer look */
+  border-radius: 12px;                             /* Rounded corners for softer look */
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);        /* Subtle shadow for depth */
-  text-align: center;                            /* Centers text within the card */
-  padding: 1rem;                                 /* Internal spacing inside each card */
-  transition: transform 0.2s ease;               /* Smooth animation when hovering or scaling */
-  width: 100%;                                   /* Allows flexible width in grid cells */
-  max-width: 320px;                              /* Ensures cards don’t grow too wide */
+  text-align: center;                              /* Centers text within the card */
+  padding: 1rem;                                   /* Internal spacing inside each card */
+  transition: transform 0.2s ease;                 /* Smooth animation when hovering or scaling */
+  width: 100%;                                     /* Allows flexible width in grid cells */
+  max-width: 320px;                                /* Ensures cards don’t grow too wide */
 }
 
 /* ================================== */
@@ -574,9 +589,9 @@ body {
 
 /* Remove bullets from the timeline list */
 .timeline {
-  list-style-type: none;   /* Removes the bullet points */
-  margin: 0;               /* Removes default top/bottom spacing */
-  padding: 0;              /* Removes left indentation */
+  list-style-type: none;                        /* Removes the bullet points */
+  margin: 0;                                    /* Removes default top/bottom spacing */
+  padding: 0;                                   /* Removes left indentation */
 }
 
 
