@@ -623,9 +623,140 @@ body {
 /* ================================== */
 
 
+
+
+/* ======================================================= */
+/* FEATURE LIST (REMOVE BULLETS)                           */
+/* Removes default list markers and resets spacing.         */
+/* ======================================================= */
+.feature-list {
+  list-style: none;                                 /* Disables default bullet points on list items */
+  padding-left: 0;                                  /* Removes default left padding applied by browsers */
+  margin-left: 0;                                   /* Removes default left margin for consistent alignment */
+}
+
+
+/* ======================================================= */
+/* WAYS TO SHOP ACCORDION (SIDE-BY-SIDE LAYOUT)            */
+/* Defines structure, layout, and transition behavior for   */
+/* the expandable "Ways to Shop" section.                   */
+/* ======================================================= */
+
+/* Accordion container: creates vertical spacing between items */
+.shop-accordion {
+  display: grid;                                  /* Organizes items in a vertical list using CSS Grid */
+  gap: 1rem;                                      /* Adds uniform vertical spacing between accordion items */
+  text-align: left;                               /* Ensures text alignment is consistent for readability */
+}
+
+/* Individual accordion item: places trigger and panel horizontally */
+.shop-item {
+  display: flex;                                    /* Aligns trigger (left) and panel (right) side-by-side */
+  align-items: flex-start;                          /* Aligns items at the top edge of the container */
+  gap: 1rem;                                        /* Adds horizontal spacing between trigger and panel */
+}
+
+/* Accordion trigger (button): styled as a text-based control */
+.shop-toggle {
+  flex: 0 0 200px;                                                 /* Sets fixed width for the left column (trigger area) */
+  background: none;                                                /* Removes default button background */
+  border: none;                                                    /* Removes default button border */
+  color: var(--color-primary-dark, #2E7D32);                     /* Applies dark green color or fallback */
+  font: inherit;                                                   /* Inherits font properties from parent container */
+  text-align: left;                                                /* Aligns text flush left within the trigger area */
+  cursor: pointer;                                                 /* Changes cursor to indicate interactivity */
+  padding: 0;                                                      /* Eliminates default button padding */
+  line-height: 1.4;                                                /* Sets readable line height for text content */
+  transition: color var(--duration-standard, 250ms) var(--easing-standard, ease);       /* Smoothly transitions text color on hover */
+}
+
+/* Hover state: applies accent color for visual feedback */
+.shop-toggle:hover {
+  color: var(--color-primary, #4CAF50);                               /* Changes to primary green color on hover */
+}
+
+/* Focus state: outlines the trigger for keyboard accessibility */
+.shop-toggle:focus-visible {
+  outline: 2px solid currentColor;                                        /* Uses current text color for the outline */
+  outline-offset: 2px;                                                    /* Adds visual separation between outline and text */
+}
+
+/* Accordion panel: initially hidden and collapsed */
+.shop-panel {
+  flex: 1 1 auto;                                                           /* Expands panel to fill remaining horizontal space */
+  max-height: 0;                                                            /* Sets collapsed height to zero */
+  opacity: 0;                                                               /* Makes panel content invisible initially */
+  overflow: hidden;                                                         /* Hides overflowing text while collapsed */
+  transition:
+    max-height var(--duration-slow, 450ms) var(--easing-standard, ease),
+    opacity var(--duration-standard, 250ms) var(--easing-standard, ease);    /* Controls animation speed and smoothness */
+}
+
+/* Open state: reveals panel content with transition */
+.shop-item.open .shop-panel {
+  max-height: 1000px;                                                         /* Expands panel height to accommodate content */
+  opacity: 1;                                                                 /* Makes panel content visible */
+}
+
+/* Mobile layout: stacks trigger and panel vertically */
+@media (max-width: 600px) {
+  .shop-item {
+    flex-direction: column;                                                   /* Changes layout to vertical stack for small screens */
+  }
+  .shop-toggle {
+    flex-basis: auto;                                                         /* Allows flexible trigger width on smaller viewports */
+  }
+}
+
+/* Reduced motion preference: disables animation transitions */
+@media (prefers-reduced-motion: reduce) {
+  .shop-panel {
+    transition: none;                                                         /* Removes transition effects for accessibility */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ================================== */
 /* VIDEO / MULTIMEDIA                 */
 /* ================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* ================================== */
