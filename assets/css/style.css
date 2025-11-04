@@ -18,7 +18,15 @@
 :root {
   --color-primary: #4CAF50;                     /* Main brand green used for buttons and highlights */
   --color-primary-dark: #2E7D32;                /* Darker shade of green for hover states and headers */
-  --color-primary-light: #C8E6C9;               /* Light green used for soft backgrounds or accents */
+  
+
+
+--color-primary-light: #e4dfd7;
+
+/*--color-primary-light: #e9ece2;*/           /* Light green used for soft backgrounds or accents */
+
+
+  /*--color-primary-light: #C8E6C9; */            /* Light green used for soft backgrounds or accents */
   --color-accent: #FDD835;                      /* Bright yellow accent color for emphasis */
   --color-bg: #F9F7F3;                          /* Off-white background color for page sections */
   --color-text-dark: #2B2B2B;                   /* Default dark text for body content */
