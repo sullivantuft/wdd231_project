@@ -18,18 +18,40 @@ document.addEventListener('DOMContentLoaded', () => {
   const toggles = document.querySelectorAll('.shop-toggle'); // Select all toggle buttons
 
   toggles.forEach((button) => {
+    // Resolve related elements once per button
+    const item = button.closest('.shop-item');             // Parent container for the pair
+    const panel = item ? item.querySelector('.shop-panel') : null; // Associated panel
+
+    // Initialize ARIA and focus behavior based on initial state (.open or not)
+    const startsOpen = item && item.classList.contains('open'); // Supports pre-opened state via markup
+    button.setAttribute('aria-expanded', String(!!startsOpen)); // true if open
+    if (panel) {
+      panel.setAttribute('aria-hidden', String(!startsOpen));   // hidden when closed
+      if (!startsOpen) {
+        panel.setAttribute('inert', '');                        // remove from tab order when closed
+      } else {
+        panel.removeAttribute('inert');                         // focusable when open
+      }
+    }
+
+    // Existing click behavior + synchronized ARIA/inert updates
     button.addEventListener('click', () => {
-      const item = button.closest('.shop-item');             // Find parent .shop-item container
-      const panel = item.querySelector('.shop-panel');       // Find the associated panel element
-      const expanded = button.getAttribute('aria-expanded') === 'true'; // Check current state
+      const wasExpanded = button.getAttribute('aria-expanded') === 'true'; // Previous state
 
       // Toggle the open/closed class for styling
       item.classList.toggle('open');
 
       // Update ARIA attributes for accessibility
-      button.setAttribute('aria-expanded', String(!expanded)); // Reflect expanded/collapsed state
+      button.setAttribute('aria-expanded', String(!wasExpanded)); // Reflect expanded/collapsed state
       if (panel) {
-        panel.setAttribute('aria-hidden', String(expanded));   // Sync panel visibility state
+        panel.setAttribute('aria-hidden', String(wasExpanded));   // Sync panel visibility state
+
+        // Manage inert to prevent focus from entering hidden panels
+        if (wasExpanded) {
+          panel.setAttribute('inert', '');                        // Now closed -> remove from tab order
+        } else {
+          panel.removeAttribute('inert');                         // Now open  -> allow interaction
+        }
       }
     });
   });

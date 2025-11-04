@@ -698,6 +698,30 @@ body {
   opacity: 1;                                                                 /* Makes panel content visible */
 }
 
+/* ================================== */
+/* ACCORDION / SHOP PANEL ACCESSIBILITY */
+/* Prevents hidden accordion panels from trapping focus */
+/* and ensures they don't interfere with tab order.     */
+/* ================================== */
+
+.shop-panel {
+  max-height: 0;                                                  /* Collapsed by default */
+  overflow: hidden;                                               /* Hides internal content visually */
+  transition: max-height 0.4s ease;                               /* Smooth expand/collapse animation */
+  visibility: hidden;                                             /* Hidden from sight and focus when collapsed */
+  pointer-events: none;                                           /* Disables clicking or tabbing into hidden panels */
+}
+
+/* When panel is opened (JS adds .open to parent) */
+.shop-item.open .shop-panel {
+  max-height: 300px;                                              /* Expands section smoothly */
+  visibility: visible;                                            /* Makes content visible */
+  pointer-events: auto;                                           /* Enables interaction */
+  overflow: visible;                                              /* Allows text to display normally */
+}
+
+
+
 /* Mobile layout: stacks trigger and panel vertically */
 @media (max-width: 600px) {
   .shop-item {
