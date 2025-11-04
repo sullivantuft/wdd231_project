@@ -1,43 +1,46 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Contact Us - Trellis Farm and Flowers</title>
-        <Link rel="stylesheet" href="assets/css/style.css" />
-        <script type="module" src="assets/js/main.js"></script>
-    </head>
-    <body>
-        <header class="site-header">
-        <div class="container header-row">
-          <div class="brand">
-            <img src="assets/images/trellis-logo.png" alt="Utah Farms and Flowers logo" class="logo">
-            <h1>Utah Farms & Flowers</h1>
-          </div>
-            <nav class="nav" aria-label="Primary navigation">
-            <a href="index.html">Produce</a>
-            <a href="index.html#availability">Availability</a>
-            <a href="index.html#wholesale">Wholesale</a>
-            <a href="contact.html" aria-current="page">Contact</a>
-            <a href="index.html#about">About</a>
-            </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Trellis Farm and Flowers</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script type="module" src="assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-row">
+        <div class="brand">
+          <img src="assets/images/trellis-logo.png" alt="Utah Farms and Flowers logo" class="logo" />
+          <h1>Utah Farms &amp; Flowers</h1>
         </div>
+
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="index.html" aria-current="page">Produce</a>
+          <a href="wholesale.html">Wholesale</a>
+          <a href="retail.html">Retail</a>
+          <a href="contact.html">Contact</a>
+          <a href="about.html">About</a>
+        </nav>
+      </div>
     </header>
 
     <main id="app" class="container">
-        <section class="contact-section" id="contact">
-            <h2 class="section-title">Contact Us</h2>
-            <p class="contact-text">We would love to hear from you! Whether you have questions about our produce, want to place an order, or just want to say hello, feel free to reach out to us using the contact form below or through the provided contact information.</p>
-            <div class="contact-info">
-                <p><strong>Address:</strong> 123 Farm Lane, UT 84065</p>
-                <p><strong>Phone:</strong> (123) 123-1234</p>
-                <p><strong>Email:</strong> <a href="mailto: Utahfarms">Utahfarms</a>@example.com</p>
-                <p><strong>Business Hours:</strong> Monday - Friday: 9am - 5pm</p>
-            </div>
-        </section>
+      <section class="contact-section" id="contact">
+        <h2 class="section-title">Contact Us</h2>
+        <p class="contact-text">
+          We would love to hear from you! Whether you have questions about our produce, want to place an order, or just want to say hello, feel free to reach out to us using the contact form below or through the provided contact information.
+        </p>
+        <div class="contact-info">
+          <p><strong>Address:</strong> 123 Farm Lane, UT 84065</p>
+          <p><strong>Phone:</strong> (123) 123-1234</p>
+          <p><strong>Email:</strong> <a href="mailto:Utahfarms@example.com">Utahfarms@example.com</a></p>
+          <p><strong>Business Hours:</strong> Monday - Friday: 9am - 5pm</p>
+        </div>
+      </section>
 
-        <!--Contact Form -->
-        <section class="form-section" aria-labelledby="contact-form-title">
+      <!-- Contact Form -->
+      <section class="form-section" aria-labelledby="contact-form-title">
         <h3 id="contact-form-title" class="section-title">Send a Message</h3>
 
         <div id="form-success" class="form-success" hidden>
@@ -76,15 +79,55 @@
             </div>
 
             <div class="form-field form-field-full">
-                <label for="qty">Estimated Quantity</label>
-                <input id="qty" name="quantity" type="text" placeholder="e.g.,40 heads, 10 pints" />
+              <label for="qty">Estimated Quantity</label>
+              <input id="qty" name="quantity" type="text" placeholder="e.g., 40 heads, 10 pints" />
             </div>
 
             <div class="form-field form-field-full">
-                <label for ="message">Message</label>
-                <textarea id="message" name="message" rows="5" placeholder="Your message here..." required></textarea>
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Your message here..." required></textarea>
             </div>
-            
+
             <div class="form-field form-field-full">
               <button type="submit" class="btn btn-primary">Submit</button>
             </div>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer must be OUTSIDE the form and main -->
+    <footer id="site-footer" class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <h4>Contact Us</h4>
+          <p>
+            Email:
+            <a href="mailto:orders@trellisfarmandflowers.example">orders@trellisfarmandflowers.example</a><br />
+            Bluffdale, UT 84065
+          </p>
+        </div>
+
+        <div>
+          <h4>Follow Us</h4>
+          <p>
+            <a href="#" aria-label="Utah Farm and Flowers on Facebook">Facebook</a><br />
+            <a href="#" aria-label="Utah Farm and Flowers on Instagram">Instagram</a><br />
+            <a href="#" aria-label="Utah Farm and Flowers on Twitter">Twitter</a><br />
+            <a href="#" aria-label="Utah Farm and Flowers on TikTok">TikTok</a><br />
+            <a href="#" aria-label="Utah Farm and Flowers on Pinterest">Pinterest</a><br />
+            <a href="#" aria-label="Utah Farm and Flowers on YouTube">YouTube</a><br />
+            <a href="#" aria-label="Utah Farm and Flowers on LinkedIn">LinkedIn</a><br />
+            <a href="#" aria-label="Utah Farm and Flowers on Yelp">Yelp</a>
+          </p>
+        </div>
+
+        <div class="copy">
+          <small>&copy; <span id="year"></span> Utah Farm and Flowers. All rights reserved.</small>
+        </div>
+      </div>
+
+      <p class="credit">WDD231 Final Project by Sully and Lora</p>
+    </footer>
+  </body>
+</html>
