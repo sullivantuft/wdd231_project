@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Utah Farm and Flowers | Order</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script type="module" src="assets/js/order.js"> defer</script>
+  </head>
+
+  <body>
+
+
+    
+    <main id="app" class="container">
+      <section class="order-section">
+        <h2 class="section-title">Place an Order</h2>
+        <p>Choose quantities in <strong>pounds (lbs)</strong> for the items below. Prices shown are per pound.</p>
+
+        <form id="order-form" class="form">
+          <fieldset class="form-grid">
+            <legend class="sr-only">Order Form</legend>
+
+            <div class="form-field form-field-full">
+              <label for="name">Full Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required />
+            </div>
+
+            <div class="form-field form-field-full">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+
+            <hr class="divider" />
+
+            <h3>Featured Produce</h3>
+            <div class="product-grid" id="product-grid"></div>
+
+            <div class="form-field form-field-full">
+              <label>Total:</label>
+              <p id="order-total" class="total-price">$0.00</p>
+            </div>
+
+            <div class="form-field form-field-full">
+              <label for="notes">Special Instructions</label>
+              <textarea id="notes" name="notes" rows="3" placeholder="Delivery / pickup notes or substitutions..."></textarea>
+            </div>
+            
+            <!-- View all orders button -->
+
+            <div class="form-field form-field-full">
+              <button type="submit" class="btn btn-primary">Submit Order</button>
+            </div>
+          </fieldset>
+        </form>
+        <div class="form-field form-field-full">
+            <button type="button" id="view-orders-btn" class="btn btn-secondary">View All Orders</button>
+            </div>
+            <div id="orders-list" class="orders-list"></div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,9 +1,6 @@
-// Automatically change the year in the footer
-const yearSpan = document.getElementById('year');
-if (yearSpan) {
-  const currentYear = new Date().getFullYear();
-  yearSpan.textContent = currentYear;
-}
+import { loadHeaderAndFooter } from "./headerFooter.js";
+import { loadProduce } from "./produce.js";
+import { loadHero } from "./hero.js"
 
 
 
@@ -16,6 +13,16 @@ if (yearSpan) {
 // ==================================================
 document.addEventListener('DOMContentLoaded', () => {
   const toggles = document.querySelectorAll('.shop-toggle'); // Select all toggle buttons
+
+  //Loads header, footer, and hero banner.
+  loadHeaderAndFooter(); 
+  if(document.querySelector("#hero")){
+    loadHero();
+  }
+  if (document.querySelector("#produce-grid")) {
+    loadProduce();
+  }
+  
 
   toggles.forEach((button) => {
     // Resolve related elements once per button
@@ -56,3 +63,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+

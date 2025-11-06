@@ -1,0 +1,52 @@
+{
+  "produce": [
+    {
+      "name": "Arugula",
+      "image": "assets/images/arugula.jpg",
+      "alt": "Fresh Arugula",
+      "description": "Peppery and flavorful, perfect for salads and sandwiches.",
+      "pricePerLb": 12.8,
+      "unit": "lb"
+    },
+    {
+      "name": "Basil",
+      "image": "assets/images/basil.jpg",
+      "alt": "Fresh Basil",
+      "description": "Aromatic and versatile, great for pesto and Italian dishes.",
+      "pricePerLb": 10.5,
+      "unit": "lb"
+    },
+    {
+      "name": "Butterhead Lettuce",
+      "image": "assets/images/lettuce.jpg",
+      "alt": "Fresh Butterhead Lettuce",
+      "description": "Tender and mild, perfect for salads and wraps.",
+      "pricePerLb": 8.0,
+      "unit": "head"
+    },
+    {
+      "name": "Peppers",
+      "image": "assets/images/peppers.jpg",
+      "alt": "Fresh Peppers",
+      "description": "Crisp and sweet, great for snacking and cooking.",
+      "pricePerLb": 6.5,
+      "unit": "lb"
+    },
+    {
+      "name": "Spinach",
+      "image": "assets/images/spinach.jpg",
+      "alt": "Fresh Spinach",
+      "description": "Nutritious and versatile, perfect for salads, smoothies, and cooking.",
+      "pricePerLb": 9.5,
+      "unit": "lb"
+    },
+    {
+      "name": "Strawberries",
+      "image": "assets/images/strawberries.jpg",
+      "alt": "Fresh Strawberries",
+      "description": "Sweet and juicy, perfect for snacking and desserts.",
+      "pricePerLb": 5.0,
+      "unit": "lb"
+    }
+  ]
+}
