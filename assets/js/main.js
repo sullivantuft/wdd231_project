@@ -3,7 +3,7 @@ import { loadProduce } from "./produce.js";
 import { loadHero } from "./hero.js"
 
 
-
+function init(){
 // ==================================================
 // WAYS TO SHOP ACCORDION FUNCTIONALITY
 // ----------------------------------------------
@@ -63,4 +63,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
-
+}
+init();
