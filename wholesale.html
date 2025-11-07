@@ -3,68 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wholesale - Trellis Farm and Flowers</title>
+    <title>Wholesale – Utah Farms & Flowers</title>
     <link rel="stylesheet" href="assets/css/style.css" />
     <script type="module" src="assets/js/main.js" defer></script>
   </head>
   <body>
-    <header class="site-header">
-      <div class="container header-row">
-        <div class="brand">
-          <img
-            src="assets/images/trellis-logo.png"
-            alt="Utah Farms and Flowers logo"
-            class="logo"
-          />
-          <h1>Utah Farms &amp; Flowers</h1>
-        </div>
-
-        <nav class="nav" aria-label="Primary navigation">
-          <a href="index.html">Home</a>
-          <a href="wholesale.html" aria-current="page">Wholesale</a>
-          <a href="retail.html">Retail</a>
-          <a href="contact.html">Contact</a>
-          <a href="about.html">About</a>
-        </nav>
-      </div>
-    </header>
-
     <main id="app" class="container">
-      <section class="hero section">
-        <h2 class="section-title">Wholesale Program</h2>
-        <p class="lead">
-          Reliable, consistent, and locally grown — our wholesale produce is
-          available for restaurants, grocers, caterers, and distributors
-          throughout Utah.
-        </p>
-        <p>
-          We provide weekly harvest availability lists, flexible minimum order
-          quantities, and dedicated service for business customers. Partner with
-          us to ensure your supply chain stays fresh and dependable.
-        </p>
+      <!-- Hero (matches Retail) -->
+      <section class="hero section hero--sub">
+        <div class="hero__content">
+          <h1 class="section-title">Wholesale Program</h1>
+          <p class="lead">
+            Reliable, consistent, and locally grown — our wholesale produce is available for
+            restaurants, grocers, caterers, and distributors throughout Utah.
+          </p>
+          <p>
+            We provide weekly availability, flexible minimums, and dedicated service for business
+            customers. Partner with us to keep your supply chain fresh and dependable.
+          </p>
+        </div>
       </section>
 
+      <!-- Benefits -->
       <section class="section" id="benefits">
-        <h3 class="section-title">Why Partner With Us?</h3>
+        <h2 class="section-title">Why Partner With Us?</h2>
         <ul class="feature-list">
           <li>
-            <strong>Consistent Quality:</strong> All produce is harvested and
-            packed the same day for superior freshness and shelf life.
+            <strong>Consistent Quality:</strong> Harvested and packed the same day for superior
+            freshness and shelf life.
           </li>
           <li>
-            <strong>Flexible Volume:</strong> Start small and scale as your
-            demand grows.
+            <strong>Flexible Volume:</strong> Start small and scale as demand grows.
           </li>
           <li>
-            <strong>On-Time Delivery:</strong> Coordinated delivery schedules
-            and pickup options available.
+            <strong>On-Time Delivery:</strong> Coordinated delivery windows and pickup options.
           </li>
         </ul>
       </section>
 
+      <!-- Pricing Tiers (same tight table spacing as Retail) -->
       <section class="section" id="tiers">
-        <h3 class="section-title">Wholesale Pricing Tiers</h3>
-        <table class="table">
+        <h2 class="section-title">Wholesale Pricing Tiers</h2>
+        <table class="table table--tight">
           <thead>
             <tr>
               <th>Tier</th>
@@ -90,32 +70,69 @@
               <td>Partner</td>
               <td>300+ units</td>
               <td>15–22% off retail</td>
-              <td>Contracted pricing and logistics support</td>
+              <td>Contract pricing and logistics support</td>
             </tr>
           </tbody>
         </table>
       </section>
 
+      <!-- Micro FAQ (matches Retail component) -->
+      <section class="section" id="wholesale-faq">
+        <h2 class="section-title">Wholesale FAQ</h2>
+        <div class="faq">
+          <details>
+            <summary>What are your order minimums?</summary>
+            <p>Most items start at a single case or 25-unit minimum; tiered discounts apply as volumes increase.</p>
+          </details>
+          <details>
+            <summary>Do you deliver?</summary>
+            <p>Yes. We deliver across the Wasatch Front on set route days; pickup is also available in Bluffdale.</p>
+          </details>
+          <details>
+            <summary>How do I get weekly availability?</summary>
+            <p>Apply below and opt-in to our weekly availability email. You can request standing orders as well.</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- CTA Slab (consistent with Retail subscribe) -->
+      <section class="section cta-slab" id="catalog-signup">
+        <h2 class="section-title">Get Our Weekly Availability & Catalog</h2>
+        <p class="lead">Join our wholesale list to receive current pricing, availability, and route days.</p>
+        <form id="wholesale-subscribe" class="form form--inline" action="#" method="post">
+          <fieldset class="form-grid form-grid--inline">
+            <legend class="sr-only">Wholesale availability subscription</legend>
+            <div class="form-field">
+              <label for="biz-sub-name">Contact Name</label>
+              <input id="biz-sub-name" name="name" type="text" required />
+            </div>
+            <div class="form-field">
+              <label for="biz-sub-email">Email</label>
+              <input id="biz-sub-email" name="email" type="email" required />
+            </div>
+            <div class="form-field form-field--button">
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </div>
+          </fieldset>
+        </form>
+        <p class="muted">Already purchasing? You can also <a href="#apply">apply for an account</a> below.</p>
+      </section>
+
+      <!-- Application Form (aligned with Retail form styles) -->
       <section class="section" id="apply">
-        <h3 class="section-title">Apply for a Wholesale Account</h3>
+        <h2 class="section-title">Apply for a Wholesale Account</h2>
         <p>
-          Fill out the form below to begin the application process. Once we
-          receive your information, we’ll send you a current catalog and
-          discuss pricing, delivery, and account setup.
+          Complete the application below. We’ll follow up with your catalog, pricing, delivery options,
+          and account setup details.
         </p>
 
         <form id="wholesale-form" class="form" action="#" method="post">
-          <fieldset>
+          <fieldset class="form-grid">
             <legend class="sr-only">Wholesale Application</legend>
 
             <div class="form-field">
               <label for="bizname">Business Name</label>
-              <input
-                id="bizname"
-                name="business_name"
-                type="text"
-                required
-              />
+              <input id="bizname" name="business_name" type="text" required />
             </div>
 
             <div class="form-field">
@@ -133,71 +150,22 @@
               <input id="phone" name="phone" type="tel" />
             </div>
 
-            <div class="form-field">
+            <div class="form-field form-field-full">
               <label for="volume">Estimated Weekly Volume</label>
-              <input
-                id="volume"
-                name="weekly_volume"
-                type="text"
-                placeholder="e.g., 100 units"
-              />
+              <input id="volume" name="weekly_volume" type="text" placeholder="e.g., 100 units" />
             </div>
 
-            <div class="form-field">
+            <div class="form-field form-field-full">
               <label for="message">Notes / Products of Interest</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="5"
-                placeholder="Describe what products or volumes you're interested in..."
-              ></textarea>
+              <textarea id="message" name="message" rows="5" placeholder="Describe desired products, pack sizes, and delivery needs..."></textarea>
             </div>
 
-            <div class="form-field">
-              <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="form-field form-field-full">
+              <button type="submit" class="btn btn-primary">Submit Application</button>
             </div>
           </fieldset>
         </form>
       </section>
     </main>
-
-    <footer id="site-footer" class="site-footer">
-      <div class="container footer-grid">
-        <div>
-          <h4>Contact Us</h4>
-          <p>
-            Email:
-            <a href="mailto:orders@trellisfarmandflowers.example"
-              >orders@trellisfarmandflowers.example</a
-            ><br />
-            Bluffdale, UT 84065
-          </p>
-        </div>
-
-        <div>
-          <h4>Follow Us</h4>
-          <p>
-            <a href="#" aria-label="Facebook">Facebook</a><br />
-            <a href="#" aria-label="Instagram">Instagram</a><br />
-            <a href="#" aria-label="Twitter">Twitter</a><br />
-            <a href="#" aria-label="TikTok">TikTok</a><br />
-            <a href="#" aria-label="Pinterest">Pinterest</a><br />
-            <a href="#" aria-label="YouTube">YouTube</a><br />
-            <a href="#" aria-label="LinkedIn">LinkedIn</a><br />
-            <a href="#" aria-label="Yelp">Yelp</a>
-          </p>
-        </div>
-
-        <div class="copy">
-          <small
-            >&copy; <span id="year"></span> Utah Farm and Flowers. All rights
-            reserved.</small
-          >
-        </div>
-      </div>
-
-      <p class="credit">WDD231 Final Project by Sully and Lora</p>
-    </footer>
   </body>
 </html>
-
