@@ -3,152 +3,149 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Retail - Trellis Farm and Flowers</title>
+    <title>Retail – Utah Farms & Flowers</title>
     <link rel="stylesheet" href="assets/css/style.css" />
     <script type="module" src="assets/js/main.js" defer></script>
   </head>
   <body>
     <main id="app" class="container">
-      <section class="hero section">
-        <h2 class="section-title">Retail Store</h2>
-        <p class="lead">
-          Welcome to our retail section — where you can enjoy fresh,
-          locally-grown produce direct from our farm. Whether you are shopping
-          for your family, planning a special meal, or simply craving the
-          highest-quality greens and herbs, you will find it here.
-        </p>
-        <p>
-          We proudly serve the community through local farmers markets,
-          subscription boxes, and limited in-store pickup. All our produce is
-          harvested daily for maximum freshness and flavor.
-        </p>
-        </section>
-
-        <section class="section" id="retail-options">
-            <h3 class="section-title">Ways to Shop</h3>
-
-            <div class="shop-accordion">
-                <div class="shop-item">
-                <button class="shop-toggle"><strong>Farm Stand</strong></button>
-                <div class="shop-panel">
-                    Visit our Bluffdale location for walk-in purchases every Thursday and Saturday morning.
-                </div>
-                </div>
-
-               <div class="shop-item">
-                    <button class="shop-toggle"
-                            aria-expanded="false"
-                            aria-controls="farmers-markets-panel">
-                        <strong>Farmers Markets</strong>
-                    </button>
-                    <div class="shop-panel"
-                        id="farmers-markets-panel"
-                        role="region"
-                        aria-hidden="true">
-                        Find us weekly at the <em>Downtown SLC</em> and <em>Provo</em> markets.
-                    </div>
-                    </div>
-
-                    <div class="shop-item">
-                    <button class="shop-toggle"
-                            aria-expanded="false"
-                            aria-controls="produce-boxes-panel">
-                        <strong>Produce Boxes</strong>
-                    </button>
-                    <div class="shop-panel"
-                        id="produce-boxes-panel"
-                        role="region"
-                        aria-hidden="true">
-                        Subscribe to our seasonal CSA box for weekly fresh deliveries.
-                    </div>
-                    </div>
-
-                </div>
-            </div>
-            </section>
-
-
-
-
-      <section class="section" id="featured-products">
-        <h3 class="section-title">Featured Products</h3>
-        <div class="product-grid">
-          <article class="card">
-            <img
-              src="assets/images/lettuce.jpg"
-              alt="Fresh Butterhead Lettuce"
-            />
-            <h4>Butterhead Lettuce</h4>
-            <p>Crisp, tender leaves — perfect for wraps and salads.</p>
-            <p><strong>$3.00 / head</strong></p>
-          </article>
-
-          <article class="card">
-            <img src="assets/images/basil.jpg" alt="Fresh Basil" />
-            <h4>Sweet Basil</h4>
-            <p>Hand-picked and aromatic. Ideal for sauces and garnishes.</p>
-            <p><strong>$4.00 / bunch</strong></p>
-          </article>
-
-          <article class="card">
-            <img src="assets/images/tomatoes.jpg" alt="Cherry Tomatoes" />
-            <h4>Cherry Tomatoes</h4>
-            <p>Bright and juicy — perfect for snacking or salads.</p>
-            <p><strong>$5.00 / pint</strong></p>
-          </article>
+      <section class="hero section hero--sub">
+        <div class="hero__content">
+          <h1 class="section-title">Retail Store</h1>
+          <p class="lead">
+            Fresh, local, and picked to order. Browse this week's featured
+            produce, ways to shop, and our CSA subscription.
+          </p>
         </div>
       </section>
 
-      <section class="section" id="subscribe">
-        <h3 class="section-title">Join Our CSA Program</h3>
-        <p>
-          Receive a weekly box of freshly harvested produce straight from our
-          towers to your table. Each box includes a seasonal selection of
-          greens, herbs, and vegetables — all grown sustainably right here in
-          Utah.
-        </p>
-
-        <form id="subscribe-form" class="form" action="#" method="post">
-          <fieldset>
-            <legend class="sr-only">CSA Subscription Form</legend>
-
-            <div class="form-field">
-              <label for="name">Full Name</label>
-              <input id="name" name="name" type="text" required />
+      <section class="section" id="retail-options">
+        <h2 class="section-title">Ways to Shop</h2>
+        <div class="shop-accordion">
+          <div class="shop-item">
+            <button class="shop-toggle" aria-expanded="false" aria-controls="farmstand-panel">
+              <strong>Farm Stand</strong>
+            </button>
+            <div class="shop-panel" id="farmstand-panel" role="region" aria-hidden="true">
+              Visit our Bluffdale stand Thursdays & Saturdays, 9–11 AM.
+              Card + tap accepted. Parking on south side.
             </div>
-
-            <div class="form-field">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" required />
+          </div>
+          <div class="shop-item">
+            <button class="shop-toggle" aria-expanded="false" aria-controls="markets-panel">
+              <strong>Farmers Markets</strong>
+            </button>
+            <div class="shop-panel" id="markets-panel" role="region" aria-hidden="true">
+              Find us weekly at <em>Downtown SLC</em> and <em>Provo</em>.
+              Follow Instagram Stories for stall updates.
             </div>
-
-            <div class="form-field">
-              <label for="plan">Subscription Plan</label>
-              <select id="plan" name="plan" required>
-                <option value="" disabled selected>Select a plan</option>
-                <option value="weekly">Weekly Box</option>
-                <option value="biweekly">Bi-Weekly Box</option>
-                <option value="monthly">Monthly Box</option>
-              </select>
+          </div>
+          <div class="shop-item">
+            <button class="shop-toggle" aria-expanded="false" aria-controls="csa-panel">
+              <strong>CSA Produce Boxes</strong>
+            </button>
+            <div class="shop-panel" id="csa-panel" role="region" aria-hidden="true">
+              Weekly seasonal greens & herbs with optional add-ons.
+              Skip weeks anytime. Pickup or delivery (fee applies).
             </div>
+          </div>
+        </div>
+      </section>
 
-            <div class="form-field">
-              <label for="notes">Notes</label>
-              <textarea
-                id="notes"
-                name="notes"
-                rows="4"
-                placeholder="Any special requests?"
-              ></textarea>
+      <section class="section" id="featured-products">
+        <h2 class="section-title">Featured Products</h2>
+        <div class="product-grid product-grid--retail">
+          <article class="card product-card">
+            <figure class="product-card__media">
+              <img src="assets/images/lettuce.jpg" alt="Butterhead lettuce heads" loading="lazy" />
+            </figure>
+            <div class="product-card__body">
+              <h3>Butterhead Lettuce</h3>
+              <p>Crisp, tender leaves—perfect for wraps & salads.</p>
+              <p class="price">$3.00 / head</p>
             </div>
+          </article>
 
+          <article class="card product-card">
+            <figure class="product-card__media">
+              <img src="assets/images/basil.jpg" alt="Bunch of fresh basil" loading="lazy" />
+            </figure>
+            <div class="product-card__body">
+              <h3>Sweet Basil</h3>
+              <p>Aromatic and hand-picked; ideal for sauces & pesto.</p>
+              <p class="price">$4.00 / bunch</p>
+            </div>
+          </article>
+
+          <article class="card product-card">
+            <figure class="product-card__media">
+              <img src="assets/images/tomatoes.jpg" alt="Cherry tomatoes" loading="lazy" />
+            </figure>
+            <div class="product-card__body">
+              <h3>Cherry Tomatoes</h3>
+              <p>Bright and juicy—snackable or salad-ready.</p>
+              <p class="price">$5.00 / pint</p>
+            </div>
+          </article>
+        </div>
+        <p class="muted">Images are representative—actual weekly items may vary by season.</p>
+      </section>
+
+      <section class="section" id="pricing">
+        <h2 class="section-title">Simple Pricing</h2>
+        <table class="table table--tight">
+          <thead>
+            <tr><th>Item</th><th>Unit</th><th>Retail Price</th><th>Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Butterhead Lettuce</td><td>head</td><td>$3.00</td><td>Washed & ready to eat</td></tr>
+            <tr><td>Sweet Basil</td><td>bunch</td><td>$4.00</td><td>~2 oz per bunch</td></tr>
+            <tr><td>Cherry Tomatoes</td><td>pint</td><td>$5.00</td><td>Mixed varieties in season</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section" id="retail-faq">
+        <h2 class="section-title">Retail FAQ</h2>
+        <div class="faq">
+          <details>
+            <summary>Do you accept cards?</summary>
+            <p>Yes. We accept major cards and mobile tap. Cash also welcome.</p>
+          </details>
+          <details>
+            <summary>How fresh is your produce?</summary>
+            <p>We harvest the morning of pickup/market whenever possible for maximum freshness.</p>
+          </details>
+          <details>
+            <summary>Is everything pesticide-free?</summary>
+            <p>We use integrated pest management and avoid synthetic pesticides.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="section cta-slab">
+        <h2 class="section-title">Get Weekly Availability</h2>
+        <p class="lead">Join our list for weekly availability and CSA openings.</p>
+        <form id="subscribe-form" class="form form--inline" action="#" method="post">
+          <fieldset class="form-grid form-grid--inline">
+            <legend class="sr-only">Subscribe for weekly availability</legend>
             <div class="form-field">
+              <label for="sub-name">Full Name</label>
+              <input id="sub-name" name="name" type="text" required />
+            </div>
+            <div class="form-field">
+              <label for="sub-email">Email</label>
+              <input id="sub-email" name="email" type="email" required />
+            </div>
+            <div class="form-field form-field--button">
               <button type="submit" class="btn btn-primary">Subscribe</button>
             </div>
           </fieldset>
         </form>
+        <p class="muted">
+          Prefer to talk? <a href="contact.html">Contact us</a> for special requests or event orders.
+        </p>
       </section>
     </main>
- 
   </body>
 </html>
