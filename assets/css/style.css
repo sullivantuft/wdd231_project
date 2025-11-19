@@ -6,7 +6,7 @@
    This ensures consistent typography sitewide. */
 /* ================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
 /* ================================== */
 /* VARIABLES / CUSTOM PROPERTIES       */
@@ -21,64 +21,67 @@
 /* ====================================*/
 /*:root {
   --color-primary: #4CAF50;                     /* Main brand green used for buttons and highlights */
-  /*--color-primary-dark: #2E7D32;                /* Darker shade of green for hover states and headers */
-  
-
+/*--color-primary-dark: #2E7D32;                /* Darker shade of green for hover states and headers */
 
 /*--color-primary-light: #e4dfd7;
 
-/*--color-primary-light: #e9ece2;*/           /* Light green used for soft backgrounds or accents */
+/*--color-primary-light: #e9ece2;*/ /* Light green used for soft backgrounds or accents */
 
-
-  /*--color-primary-light: #C8E6C9; */            /* Light green used for soft backgrounds or accents */
-  /*--color-accent: #FDD835;                      /* Bright yellow accent color for emphasis */
-  /* --color-bg: #F9F7F3;                          /* Off-white background color for page sections */
-  /*--color-text-dark: #2B2B2B;                   /* Default dark text for body content */
-  /*--color-text-light: #FFFFFF;                  /* White text for contrast on dark backgrounds */
+/*--color-primary-light: #C8E6C9; */ /* Light green used for soft backgrounds or accents */
+/*--color-accent: #FDD835;                      /* Bright yellow accent color for emphasis */
+/* --color-bg: #F9F7F3;                          /* Off-white background color for page sections */
+/*--color-text-dark: #2B2B2B;                   /* Default dark text for body content */
+/*--color-text-light: #FFFFFF;                  /* White text for contrast on dark backgrounds */
 /*} */
-
 
 /* ===================================*/
 /* Updated color scheme */
 /* ====================================*/
 :root {
   /* HEADER + NAV BAR */
-  --color-primary: #0A3D62;          /* Dark water blue (header background, CTA emphasis) */
-  --color-primary-dark: #082D49;     /* Even deeper blue for hover or header shading */
+  --color-primary: #0a3d62; /* Dark water blue (header background, CTA emphasis) */
+  --color-primary-dark: #082d49; /* Even deeper blue for hover or header shading */
 
   /* BUTTONS */
-  --color-button-primary: #1B5E20;   /* Deep forest green */
-  --color-button-primary-dark: #0F3A12; /* Darker forest green for hover */
+  --color-button-primary: #1b5e20; /* Deep forest green */
+  --color-button-primary-dark: #0f3a12; /* Darker forest green for hover */
 
   /* ACCENTS */
-  --color-accent: #FDD835;           /* Yellow accent kept the same */
+  --color-accent: #fdd835; /* Yellow accent kept the same */
 
   /* BACKGROUND + TEXT */
-  --color-bg: #F9F7F3;               /* Soft beige background (same as yours) */
-  --color-text-dark: #2B2B2B;        /* Dark gray text */
-  --color-text-light: #FFFFFF;       /* Pure white text */
+  --color-bg: #f9f7f3; /* Soft beige background (same as yours) */
+  --color-text-dark: #2b2b2b; /* Dark gray text */
+  --color-text-light: #ffffff; /* Pure white text */
 
   /* OPTIONAL LIGHT SHADE */
-  --color-primary-light: #e4dfd7;    /* Neutral light tan used in the hero */
+  --color-primary-light: #e4dfd7; /* Neutral light tan used in the hero */
 }
 
 /* ================================== */
 /* ANIMATIONS / TRANSITIONS           */
 /* ================================== */
 :root {
-  --easing-standard: cubic-bezier(0.2,0.6,0.2,1); /* Smooth easing curve for transitions */
-  --easing-emphasis: cubic-bezier(0.2,0.8,0.2,1); /* Snappier feel */
-  --duration-fast: 150ms;                     /* Quick transition duration */
-  --duration-standard: 250ms;                 /* Standard transition duration */
-  --duration-slow: 450ms;                     /* Slower transition duration */
+  --easing-standard: cubic-bezier(
+    0.2,
+    0.6,
+    0.2,
+    1
+  ); /* Smooth easing curve for transitions */
+  --easing-emphasis: cubic-bezier(0.2, 0.8, 0.2, 1); /* Snappier feel */
+  --duration-fast: 150ms; /* Quick transition duration */
+  --duration-standard: 250ms; /* Standard transition duration */
+  --duration-slow: 450ms; /* Slower transition duration */
 }
 
 /* Accessibility rule: disable motion for users who prefer reduced motion */
-@media (prefers-reduced-motion: reduce){      /* Checks if the user's OS/browser setting prefers reduced motion */
-  * {                                         /* Targets all elements on the page */ 
-    animation: none !important;               /* Disables all CSS animations */
-    transition: none !important;              /* Disables all CSS transitions */
-    scroll-behavior: auto !important;         /* Disables smooth scrolling behavior */
+@media (prefers-reduced-motion: reduce) {
+  /* Checks if the user's OS/browser setting prefers reduced motion */
+  * {
+    /* Targets all elements on the page */
+    animation: none !important; /* Disables all CSS animations */
+    transition: none !important; /* Disables all CSS transitions */
+    scroll-behavior: auto !important; /* Disables smooth scrolling behavior */
   }
 }
 
@@ -95,7 +98,7 @@
    and borders across all elements. */
 /* ================================== */
 * {
-  box-sizing: border-box;                       /* Includes padding and border in element width/height */
+  box-sizing: border-box; /* Includes padding and border in element width/height */
 }
 
 /* ================================== */
@@ -104,13 +107,13 @@
    background color, and layout alignment. */
 /* ================================== */
 body {
-  font-family: 'Poppins', sans-serif;           /* Sets clean, modern font across the site */
-  color: var(--color-text-dark);                /* Default dark gray text for readability */
-  background-color: var(--color-bg);            /* Light neutral background for contrast */
-  margin: 0;                                    /* Removes default browser margin */
-  line-height: 1.6;                             /* Improves text readability with balanced spacing */
-  text-align: left;                           /* Centers text globally (can be overridden later) */
-}                                                
+  font-family: "Poppins", sans-serif; /* Sets clean, modern font across the site */
+  color: var(--color-text-dark); /* Default dark gray text for readability */
+  background-color: var(--color-bg); /* Light neutral background for contrast */
+  margin: 0; /* Removes default browser margin */
+  line-height: 1.6; /* Improves text readability with balanced spacing */
+  text-align: left; /* Centers text globally (can be overridden later) */
+}
 
 /* ================================== */
 /* PAGE CONTAINER                      */
@@ -118,16 +121,14 @@ body {
    centers them horizontally on the screen. */
 /* ================================== */
 .container {
-  width: 90%;                                   /* Uses 90% of viewport width on small screens */
-  max-width: 1100px;                            /* Prevents lines from becoming too wide */
-  margin: 0 auto;                               /* Centers the container horizontally */
+  width: 90%; /* Uses 90% of viewport width on small screens */
+  max-width: 1100px; /* Prevents lines from becoming too wide */
+  margin: 0 auto; /* Centers the container horizontally */
 }
-
 
 /* ================================== */
 /* BREADCRUMBS                        */
 /* ================================== */
-
 
 /* ================================== */
 /* BUTTONS                            */
@@ -137,12 +138,12 @@ body {
 /* ================================== */
 
 .btn {
-  display: inline-block;                        /* Allows padding and margin like a block element */
-  padding: 0.75rem 1.5rem;                      /* Adds inner space around text for comfort */
-  border-radius: 25px;                          /* Creates pill-shaped rounded corners */
-  text-decoration: none;                        /* Removes underlines for link-based buttons */
-  font-weight: 600;                             /* Makes button text bold and readable */
-  transition: background-color 0.3s;            /* Smooth color change on hover */
+  display: inline-block; /* Allows padding and margin like a block element */
+  padding: 0.75rem 1.5rem; /* Adds inner space around text for comfort */
+  border-radius: 25px; /* Creates pill-shaped rounded corners */
+  text-decoration: none; /* Removes underlines for link-based buttons */
+  font-weight: 600; /* Makes button text bold and readable */
+  transition: background-color 0.3s; /* Smooth color change on hover */
 }
 
 /* ================================== */
@@ -151,13 +152,15 @@ body {
 /* ================================== */
 
 .btn-primary {
-  background-color: var(--color-primary);       /* Uses main brand color (green) */
-  color: var(--color-text-light);               /* White text for contrast */
+  background-color: var(--color-primary); /* Uses main brand color (green) */
+  color: var(--color-text-light); /* White text for contrast */
 }
 
 /* Hover effect for primary button */
 .btn-primary:hover {
-  background-color: var(--color-primary-dark);  /* Darkens background on hover for feedback */
+  background-color: var(
+    --color-primary-dark
+  ); /* Darkens background on hover for feedback */
 }
 
 /* ================================== */
@@ -167,13 +170,17 @@ body {
 /* ================================== */
 
 .btn-secondary {
-  background-color: var(--color-accent);        /* Yellow accent color for visual contrast */
-  color: var(--color-text-dark);                /* Dark text for readability on light background */
+  background-color: var(
+    --color-accent
+  ); /* Yellow accent color for visual contrast */
+  color: var(
+    --color-text-dark
+  ); /* Dark text for readability on light background */
 }
 
 /* Hover effect for secondary button */
 .btn-secondary:hover {
-  background-color: #fbc02d;                    /* Slightly darker yellow on hover for interaction cue */
+  background-color: #fbc02d; /* Slightly darker yellow on hover for interaction cue */
 }
 
 /* ================================== */
@@ -183,7 +190,7 @@ body {
 /* ================================== */
 
 .badges {
-  margin-top: 1rem;                             /* Adds space above the group of badges */
+  margin-top: 1rem; /* Adds space above the group of badges */
 }
 
 /* ================================== */
@@ -193,25 +200,22 @@ body {
 /* ================================== */
 
 .badge {
-  display: inline-block;                        /* Keeps badges side-by-side while allowing block styling */
-  background-color: var(--color-primary);       /* Matches primary color scheme */
-  color: var(--color-text-light);               /* White text for readability */
-  padding: 0.4rem 0.8rem;                       /* Compact internal spacing */
-  border-radius: 20px;                          /* Smooth, rounded pill shape */
-  font-size: 0.85rem;                           /* Slightly smaller than normal text */
-  margin-right: 0.5rem;                         /* Space between badges when in a row */
+  display: inline-block; /* Keeps badges side-by-side while allowing block styling */
+  background-color: var(--color-primary); /* Matches primary color scheme */
+  color: var(--color-text-light); /* White text for readability */
+  padding: 0.4rem 0.8rem; /* Compact internal spacing */
+  border-radius: 20px; /* Smooth, rounded pill shape */
+  font-size: 0.85rem; /* Slightly smaller than normal text */
+  margin-right: 0.5rem; /* Space between badges when in a row */
 }
-
 
 /* ================================== */
 /* CALL TO ACTION                     */
 /* ================================== */
 
-
 /* ================================== */
 /* CARDS / BOXES                      */
 /* ================================== */
-
 
 /* ================================== */
 /* CONTACT FORMS                      */
@@ -221,12 +225,12 @@ body {
 /* ================================== */
 
 .form-section {
-  display: flex;                                /* Enables flexbox layout for vertical alignment */
-  flex-direction: column;                       /* Stacks content (heading + form) vertically */
-  align-items: center;                          /* Centers items horizontally within the section */
-  justify-content: center;                      /* Centers items vertically inside the section */
-  text-align: center;                           /* Centers text like titles or intro text */
-  padding: 2rem 0;                              /* Adds vertical padding for breathing room */
+  display: flex; /* Enables flexbox layout for vertical alignment */
+  flex-direction: column; /* Stacks content (heading + form) vertically */
+  align-items: center; /* Centers items horizontally within the section */
+  justify-content: center; /* Centers items vertically inside the section */
+  text-align: center; /* Centers text like titles or intro text */
+  padding: 2rem 0; /* Adds vertical padding for breathing room */
 }
 
 /* ================================== */
@@ -236,15 +240,14 @@ body {
 /* ================================== */
 
 .form {
-  width: 100%;                                  /* lets the form stretch the full width of its parent container (.container)  */
-  max-width: 1200px;                             /* but never wider than 600 px, keeping it narrow and easy to read            */
-  margin: 0 auto;                               /* centers the form horizontally by giving equal left/right margins           */
-  background-color: #fff;                     /* makes the form box white against the beige page background                 */
-  padding: 2rem;                                /* adds space inside the box so text/inputs don’t touch the edges             */
-  border-radius: 10px;                          /* rounds the corners for a softer, modern look                              */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);     /* adds a faint drop shadow so it appears slightly raised     */
+  width: 100%; /* lets the form stretch the full width of its parent container (.container)  */
+  max-width: 1200px; /* but never wider than 600 px, keeping it narrow and easy to read            */
+  margin: 0 auto; /* centers the form horizontally by giving equal left/right margins           */
+  background-color: #fff; /* makes the form box white against the beige page background                 */
+  padding: 2rem; /* adds space inside the box so text/inputs don’t touch the edges             */
+  border-radius: 10px; /* rounds the corners for a softer, modern look                              */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* adds a faint drop shadow so it appears slightly raised     */
 }
-
 
 /* ================================== */
 /* FORM GRID LAYOUT                   */
@@ -253,8 +256,8 @@ body {
 /* ================================== */
 
 .form-grid {
-  display: grid;                               /* Enables grid layout for field positioning */
-  gap: 1.5rem;                                 /* Space between form fields vertically and horizontally */
+  display: grid; /* Enables grid layout for field positioning */
+  gap: 1.5rem; /* Space between form fields vertically and horizontally */
 }
 
 /* ================================== */
@@ -264,9 +267,9 @@ body {
 /* ================================== */
 
 .form-field {
-  display: flex;                               /* Enables vertical stacking of label and input */
-  flex-direction: column;                      /* Places label above input field */
-  text-align: left;                            /* Aligns text to the left for readability */
+  display: flex; /* Enables vertical stacking of label and input */
+  flex-direction: column; /* Places label above input field */
+  text-align: left; /* Aligns text to the left for readability */
 }
 
 /* ================================== */
@@ -276,14 +279,12 @@ body {
 /* ================================== */
 
 .form-field-full {
-  grid-column: 1 / -1;                         /* Makes the element occupy full grid width */
+  grid-column: 1 / -1; /* Makes the element occupy full grid width */
 }
-
 
 /* ================================== */
 /* DROPDOWNS / MENUS                  */
 /* ================================== */
-
 
 /* ================================== */
 /* FOOTER                             */
@@ -292,10 +293,14 @@ body {
 /* ================================== */
 
 .site-footer {
-  background-color: var(--color-primary-dark);   /* Deep green background consistent with header */
-  color: var(--color-text-light);                /* White text for high contrast and readability */
-  padding: 2rem 0;                               /* Adds vertical spacing inside the footer */
-  margin-top: 3rem;                              /* Creates space above footer separating it from main content */
+  background-color: var(
+    --color-primary-dark
+  ); /* Deep green background consistent with header */
+  color: var(
+    --color-text-light
+  ); /* White text for high contrast and readability */
+  padding: 2rem 0; /* Adds vertical spacing inside the footer */
+  margin-top: 3rem; /* Creates space above footer separating it from main content */
 }
 
 /* ================================== */
@@ -305,11 +310,11 @@ body {
 /* ================================== */
 
 .footer-grid {
-  display: grid;                                 /* Uses CSS Grid layout for structured alignment */
-  grid-template-columns: 1fr 1fr;                /* Creates two equal-width columns */
-  gap: 2rem;                                     /* Horizontal and vertical space between columns */
-  justify-items: center;                         /* Centers each grid item horizontally within its cell */
-  text-align: center;                            /* Centers all text within each grid cell */
+  display: grid; /* Uses CSS Grid layout for structured alignment */
+  grid-template-columns: 1fr 1fr; /* Creates two equal-width columns */
+  gap: 2rem; /* Horizontal and vertical space between columns */
+  justify-items: center; /* Centers each grid item horizontally within its cell */
+  text-align: center; /* Centers all text within each grid cell */
 }
 
 /* ================================== */
@@ -318,8 +323,8 @@ body {
 /* ================================== */
 
 .footer-grid a {
-  color: var(--color-accent);                    /* Bright yellow accent color for visibility */
-  text-decoration: none;                         /* Removes underlines for a clean design */
+  color: var(--color-accent); /* Bright yellow accent color for visibility */
+  text-decoration: none; /* Removes underlines for a clean design */
 }
 
 /* ================================== */
@@ -328,7 +333,7 @@ body {
 /* ================================== */
 
 .footer-grid a:hover {
-  text-decoration: underline;                    /* Provides a simple hover indicator for accessibility */
+  text-decoration: underline; /* Provides a simple hover indicator for accessibility */
 }
 
 /* ================================== */
@@ -337,10 +342,10 @@ body {
 /* ================================== */
 
 .copy {
-  grid-column: 1 / -1;                           /* Spans full width across both grid columns */
-  text-align: center;                            /* Centers the copyright line */
-  margin-top: 1rem;                              /* Adds space above for separation */
-  font-size: 0.85rem;                            /* Smaller, non-dominant text size */
+  grid-column: 1 / -1; /* Spans full width across both grid columns */
+  text-align: center; /* Centers the copyright line */
+  margin-top: 1rem; /* Adds space above for separation */
+  font-size: 0.85rem; /* Smaller, non-dominant text size */
 }
 
 /* ================================== */
@@ -350,22 +355,19 @@ body {
 /* ================================== */
 
 .credit {
-  text-align: center;                            /* Centers text horizontally */
-  font-size: 0.8rem;                             /* Slightly smaller font for secondary info */
-  color: #ddd;                                 /* Light gray tone for subdued contrast */
-  margin-top: 1rem;                              /* Adds vertical spacing above the credit line */
+  text-align: center; /* Centers text horizontally */
+  font-size: 0.8rem; /* Slightly smaller font for secondary info */
+  color: #ddd; /* Light gray tone for subdued contrast */
+  margin-top: 1rem; /* Adds vertical spacing above the credit line */
 }
-
 
 /* ================================== */
 /* FORMS (INPUTS, LABELS, ETC.)       */
 /* ================================== */
 
-
 /* ================================== */
 /* GALLERY / MEDIA                    */
 /* ================================== */
-
 
 /* ================================== */
 /* HEADER                             */
@@ -374,9 +376,11 @@ body {
 /* ================================== */
 
 .site-header {
-  background-color: var(--color-primary-dark);   /* Deep green background for header */
-  color: var(--color-text-light);                /* White text for readability */
-  padding: 1rem 0;                               /* Adds top and bottom spacing */
+  background-color: var(
+    --color-primary-dark
+  ); /* Deep green background for header */
+  color: var(--color-text-light); /* White text for readability */
+  padding: 1rem 0; /* Adds top and bottom spacing */
 }
 
 /* ========================================================= */
@@ -385,10 +389,10 @@ body {
 /* ========================================================= */
 
 .header-row {
-  display: flex;                                 /* Uses flexbox for horizontal layout */
-  align-items: center;                           /* Vertically centers items in the header */
-  justify-content: space-between;                /* Pushes logo left, nav links right */
-  flex-wrap: wrap;                               /* Allows wrapping on smaller screens */
+  display: flex; /* Uses flexbox for horizontal layout */
+  align-items: center; /* Vertically centers items in the header */
+  justify-content: space-between; /* Pushes logo left, nav links right */
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
 /* ================================== */
@@ -397,9 +401,9 @@ body {
 /* ================================== */
 
 .brand {
-  font-size: 1.75rem;                            /* Large font size for brand name */
-  font-weight: 600;                              /* Bold for visual emphasis */
-  text-align: left;                              /* Aligns logo/title text to the left */
+  font-size: 1.75rem; /* Large font size for brand name */
+  font-weight: 600; /* Bold for visual emphasis */
+  text-align: left; /* Aligns logo/title text to the left */
 }
 
 /* ================================== */
@@ -408,7 +412,7 @@ body {
 /* ================================== */
 
 .nav {
-  text-align: right;                             /* Aligns all nav links to the right */
+  text-align: right; /* Aligns all nav links to the right */
 }
 
 /* ================================== */
@@ -417,10 +421,12 @@ body {
 /* ================================== */
 
 .nav a {
-  color: var(--color-text-light);                /* White links for contrast on dark background */
-  text-decoration: none;                         /* Removes underline for cleaner look */
-  margin-left: 1rem;                             /* Spacing between each link */
-  font-weight: 500;                              /* Medium font weight for legibility */
+  color: var(
+    --color-text-light
+  ); /* White links for contrast on dark background */
+  text-decoration: none; /* Removes underline for cleaner look */
+  margin-left: 1rem; /* Spacing between each link */
+  font-weight: 500; /* Medium font weight for legibility */
 }
 
 /* ================================== */
@@ -429,7 +435,7 @@ body {
 /* ================================== */
 
 .nav a:hover {
-  color: var(--color-accent);                    /* Bright accent color for hover feedback */
+  color: var(--color-accent); /* Bright accent color for hover feedback */
 }
 
 /* ============================================== */
@@ -438,9 +444,9 @@ body {
 /* ===============================================*/
 
 .brand {
-  display: flex;                                 /* Enables side-by-side alignment */
-  align-items: center;                           /* Vertically centers logo and text */
-  gap: 0.75rem;                                  /* Space between logo image and title */
+  display: flex; /* Enables side-by-side alignment */
+  align-items: center; /* Vertically centers logo and text */
+  gap: 0.75rem; /* Space between logo image and title */
 }
 
 /* ============================================= */
@@ -449,9 +455,9 @@ body {
 /* ==============================================*/
 
 .brand img.logo {
-  height: 50px;                                  /* Fixed height for logo consistency */
-  width: auto;                                   /* Maintains aspect ratio */
-  display: block;                                /* Removes inline spacing under the image */
+  height: 50px; /* Fixed height for logo consistency */
+  width: auto; /* Maintains aspect ratio */
+  display: block; /* Removes inline spacing under the image */
 }
 
 /* ====================================== */
@@ -460,13 +466,13 @@ body {
 /* =======================================*/
 
 .brand h1 {
-  margin: 0;                                     /* Removes default heading margin */
-  font-size: 1.75rem;                            /* Matches text size of brand container */
-  font-weight: 600;                              /* Keeps heading visually strong */
-  color: var(--color-text-light);                /* Ensures good contrast against dark header */
+  margin: 0; /* Removes default heading margin */
+  font-size: 1.75rem; /* Matches text size of brand container */
+  font-weight: 600; /* Keeps heading visually strong */
+  color: var(
+    --color-text-light
+  ); /* Ensures good contrast against dark header */
 }
-
-
 
 /* ====================================== */
 /* HERO SECTION                           */
@@ -476,12 +482,14 @@ body {
 /* ====================================== */
 
 .hero {
-  position: relative;                           /* Positions elements like overlays relative to this container */
-  margin-top: 1rem;                             /* Adds space between the header and the hero section */
-  background-color: var(--color-primary-light); /* Soft background color that complements site theme */
-  border-radius: 10px;                          /* Slightly rounded corners for a smooth, modern look */
-  overflow: hidden;                             /* Ensures child elements don’t spill outside rounded edges */
-  text-align: center;                           /* Centers hero text and elements horizontally */
+  position: relative; /* Positions elements like overlays relative to this container */
+  margin-top: 1rem; /* Adds space between the header and the hero section */
+  background-color: var(
+    --color-primary-light
+  ); /* Soft background color that complements site theme */
+  border-radius: 10px; /* Slightly rounded corners for a smooth, modern look */
+  overflow: hidden; /* Ensures child elements don’t spill outside rounded edges */
+  text-align: center; /* Centers hero text and elements horizontally */
 }
 
 /* ===================================== */
@@ -491,9 +499,9 @@ body {
 /* ======================================*/
 
 .hero-img {
-  width: 100%;                                  /* Image stretches full width of container */
-  height: auto;                                 /* Maintains natural aspect ratio */
-  display: block;                               /* Removes unwanted gaps below the image */
+  width: 100%; /* Image stretches full width of container */
+  height: auto; /* Maintains natural aspect ratio */
+  display: block; /* Removes unwanted gaps below the image */
 }
 
 /* ====================================== */
@@ -503,9 +511,9 @@ body {
 /* ================================== */
 
 .hero-copy {
-  padding: 2rem;                                /* Adds space inside the text area */
-  max-width: 800px;                             /* Restricts line width for optimal readability */
-  margin: 0 auto;                               /* Centers the text block within the hero section */
+  padding: 2rem; /* Adds space inside the text area */
+  max-width: 800px; /* Restricts line width for optimal readability */
+  margin: 0 auto; /* Centers the text block within the hero section */
 }
 
 /* ================================== */
@@ -514,9 +522,11 @@ body {
 /* ================================== */
 
 .hero-title {
-  color: var(--color-primary-dark);             /* Uses the darker primary color for strong contrast */
-  font-size: 2rem;                              /* Large, eye-catching font size for headline */
-  margin-bottom: 1rem;                          /* Adds space between the heading and following text */
+  color: var(
+    --color-primary-dark
+  ); /* Uses the darker primary color for strong contrast */
+  font-size: 2rem; /* Large, eye-catching font size for headline */
+  margin-bottom: 1rem; /* Adds space between the heading and following text */
 }
 
 /* ================================== */
@@ -526,26 +536,22 @@ body {
 /* ================================== */
 
 .hero-text {
-  text-align: left;                             /* Aligns paragraph text to the left for readability */
-  margin: 1rem auto;                            /* Adds vertical spacing and centers the text block */
-  max-width: 700px;                             /* Restricts text width for improved legibility */
+  text-align: left; /* Aligns paragraph text to the left for readability */
+  margin: 1rem auto; /* Adds vertical spacing and centers the text block */
+  max-width: 700px; /* Restricts text width for improved legibility */
 }
-
 
 /* ================================== */
 /* IMAGES                             */
 /* ================================== */
 
-
 /* ================================== */
 /* LINKS                              */
 /* ================================== */
 
-
 /* ================================== */
 /* LISTS                              */
 /* ================================== */
-
 
 /* ================================== */
 /* MAIN CONTENT / SECTIONS            */
@@ -557,7 +563,7 @@ body {
 /* ================================== */
 
 .featured-produce {
-  padding: 3rem 0;                              /* Adds vertical space above and below the section */
+  padding: 3rem 0; /* Adds vertical space above and below the section */
 }
 
 /* ================================== */
@@ -566,21 +572,23 @@ body {
 /* ================================== */
 
 .section-title {
-  text-align: center;                         /* Centers the section heading text */
-  color: var(--color-primary-dark);           /* Uses the dark primary theme color */
-  margin-bottom: 2rem;                        /* Adds space below the heading */
+  text-align: center; /* Centers the section heading text */
+  color: var(--color-primary-dark); /* Uses the dark primary theme color */
+  margin-bottom: 2rem; /* Adds space below the heading */
 }
-
+.table {
+  margin: 0 auto;
+}
 /* ================================== */
 /* PRODUCE GRID LAYOUT                 */
 /* Arranges product cards in equal columns */
 /* ================================== */
 
 .produce-grid {
-  display: grid;                                 /* Enables CSS Grid layout */
-  grid-template-columns: 1fr 1fr 1fr;            /* Three equal-width columns */
-  gap: 2rem;                                     /* Space between grid items */
-  justify-items: center;                         /* Centers each grid item horizontally */
+  display: grid; /* Enables CSS Grid layout */
+  grid-template-columns: 1fr 1fr 1fr; /* Three equal-width columns */
+  gap: 2rem; /* Space between grid items */
+  justify-items: center; /* Centers each grid item horizontally */
 }
 
 /* ================================== */
@@ -589,14 +597,14 @@ body {
 /* ================================== */
 
 .produce-item {
-  background-color: #fff;                        /* White card background */
-  border-radius: 12px;                             /* Rounded corners for softer look */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);        /* Subtle shadow for depth */
-  text-align: center;                              /* Centers text within the card */
-  padding: 1rem;                                   /* Internal spacing inside each card */
-  transition: transform 0.2s ease;                 /* Smooth animation when hovering or scaling */
-  width: 100%;                                     /* Allows flexible width in grid cells */
-  max-width: 320px;                                /* Ensures cards don’t grow too wide */
+  background-color: #fff; /* White card background */
+  border-radius: 12px; /* Rounded corners for softer look */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  text-align: center; /* Centers text within the card */
+  padding: 1rem; /* Internal spacing inside each card */
+  transition: transform 0.2s ease; /* Smooth animation when hovering or scaling */
+  width: 100%; /* Allows flexible width in grid cells */
+  max-width: 320px; /* Ensures cards don’t grow too wide */
 }
 
 /* ================================== */
@@ -605,11 +613,11 @@ body {
 /* ================================== */
 
 .produce-img {
-  width: 100%;                                   /* Image fills the card width */
-  aspect-ratio: 1 / 1;                           /* Ensures square proportions */
-  object-fit: cover;                             /* Crops image without distortion */
-  border-radius: 10px;                           /* Matches card corner rounding */
-  display: block;                                /* Removes small inline spacing below images */
+  width: 100%; /* Image fills the card width */
+  aspect-ratio: 1 / 1; /* Ensures square proportions */
+  object-fit: cover; /* Crops image without distortion */
+  border-radius: 10px; /* Matches card corner rounding */
+  display: block; /* Removes small inline spacing below images */
 }
 
 /* ================================== */
@@ -618,52 +626,43 @@ body {
 /* ================================== */
 
 .produce-name {
-  color: var(--color-primary-dark);              /* Dark green for readability */
-  margin-top: 1rem;                              /* Adds space above the text */
-  font-size: 1.25rem;                            /* Medium-large font for prominence */
+  color: var(--color-primary-dark); /* Dark green for readability */
+  margin-top: 1rem; /* Adds space above the text */
+  font-size: 1.25rem; /* Medium-large font for prominence */
 }
-
 
 /* Remove bullets from the timeline list */
 .timeline {
-  list-style-type: none;                        /* Removes the bullet points */
-  margin: 0;                                    /* Removes default top/bottom spacing */
-  padding: 0;                                   /* Removes left indentation */
+  list-style-type: none; /* Removes the bullet points */
+  margin: 0; /* Removes default top/bottom spacing */
+  padding: 0; /* Removes left indentation */
 }
-
 
 /* ================================== */
 /* SIDEBAR / WIDGETS                  */
 /* ================================== */
 
-
 /* ================================== */
 /* TABLES                             */
 /* ================================== */
-
 
 /* ================================== */
 /* TYPOGRAPHY                         */
 /* ================================== */
 
-
 /* ================================== */
 /* UTILITY CLASSES                    */
 /* ================================== */
-
-
-
 
 /* ======================================================= */
 /* FEATURE LIST (REMOVE BULLETS)                           */
 /* Removes default list markers and resets spacing.         */
 /* ======================================================= */
 .feature-list {
-  list-style: none;                                 /* Disables default bullet points on list items */
-  padding-left: 0;                                  /* Removes default left padding applied by browsers */
-  margin-left: 0;                                   /* Removes default left margin for consistent alignment */
+  list-style: none; /* Disables default bullet points on list items */
+  padding-left: 0; /* Removes default left padding applied by browsers */
+  margin-left: 0; /* Removes default left margin for consistent alignment */
 }
-
 
 /* ======================================================= */
 /* WAYS TO SHOP ACCORDION (SIDE-BY-SIDE LAYOUT)            */
@@ -673,58 +672,64 @@ body {
 
 /* Accordion container: creates vertical spacing between items */
 .shop-accordion {
-  display: grid;                                  /* Organizes items in a vertical list using CSS Grid */
-  gap: 1rem;                                      /* Adds uniform vertical spacing between accordion items */
-  text-align: left;                               /* Ensures text alignment is consistent for readability */
+  display: grid; /* Organizes items in a vertical list using CSS Grid */
+  gap: 1rem; /* Adds uniform vertical spacing between accordion items */
+  text-align: left; /* Ensures text alignment is consistent for readability */
 }
 
 /* Individual accordion item: places trigger and panel horizontally */
 .shop-item {
-  display: flex;                                    /* Aligns trigger (left) and panel (right) side-by-side */
-  align-items: flex-start;                          /* Aligns items at the top edge of the container */
-  gap: 1rem;                                        /* Adds horizontal spacing between trigger and panel */
+  display: flex; /* Aligns trigger (left) and panel (right) side-by-side */
+  align-items: flex-start; /* Aligns items at the top edge of the container */
+  gap: 1rem; /* Adds horizontal spacing between trigger and panel */
 }
 
 /* Accordion trigger (button): styled as a text-based control */
 .shop-toggle {
-  flex: 0 0 200px;                                                 /* Sets fixed width for the left column (trigger area) */
-  background: none;                                                /* Removes default button background */
-  border: none;                                                    /* Removes default button border */
-  color: var(--color-primary-dark, #2E7D32);                     /* Applies dark green color or fallback */
-  font: inherit;                                                   /* Inherits font properties from parent container */
-  text-align: left;                                                /* Aligns text flush left within the trigger area */
-  cursor: pointer;                                                 /* Changes cursor to indicate interactivity */
-  padding: 0;                                                      /* Eliminates default button padding */
-  line-height: 1.4;                                                /* Sets readable line height for text content */
-  transition: color var(--duration-standard, 250ms) var(--easing-standard, ease);       /* Smoothly transitions text color on hover */
+  flex: 0 0 200px; /* Sets fixed width for the left column (trigger area) */
+  background: none; /* Removes default button background */
+  border: none; /* Removes default button border */
+  color: var(
+    --color-primary-dark,
+    #2e7d32
+  ); /* Applies dark green color or fallback */
+  font: inherit; /* Inherits font properties from parent container */
+  text-align: left; /* Aligns text flush left within the trigger area */
+  cursor: pointer; /* Changes cursor to indicate interactivity */
+  padding: 0; /* Eliminates default button padding */
+  line-height: 1.4; /* Sets readable line height for text content */
+  transition: color var(--duration-standard, 250ms) var(--easing-standard, ease); /* Smoothly transitions text color on hover */
 }
 
 /* Hover state: applies accent color for visual feedback */
 .shop-toggle:hover {
-  color: var(--color-primary, #4CAF50);                               /* Changes to primary green color on hover */
+  color: var(
+    --color-primary,
+    #4caf50
+  ); /* Changes to primary green color on hover */
 }
 
 /* Focus state: outlines the trigger for keyboard accessibility */
 .shop-toggle:focus-visible {
-  outline: 2px solid currentColor;                                        /* Uses current text color for the outline */
-  outline-offset: 2px;                                                    /* Adds visual separation between outline and text */
+  outline: 2px solid currentColor; /* Uses current text color for the outline */
+  outline-offset: 2px; /* Adds visual separation between outline and text */
 }
 
 /* Accordion panel: initially hidden and collapsed */
 .shop-panel {
-  flex: 1 1 auto;                                                           /* Expands panel to fill remaining horizontal space */
-  max-height: 0;                                                            /* Sets collapsed height to zero */
-  opacity: 0;                                                               /* Makes panel content invisible initially */
-  overflow: hidden;                                                         /* Hides overflowing text while collapsed */
-  transition:
-    max-height var(--duration-slow, 450ms) var(--easing-standard, ease),
-    opacity var(--duration-standard, 250ms) var(--easing-standard, ease);    /* Controls animation speed and smoothness */
+  flex: 1 1 auto; /* Expands panel to fill remaining horizontal space */
+  max-height: 0; /* Sets collapsed height to zero */
+  opacity: 0; /* Makes panel content invisible initially */
+  overflow: hidden; /* Hides overflowing text while collapsed */
+  transition: max-height var(--duration-slow, 450ms)
+      var(--easing-standard, ease),
+    opacity var(--duration-standard, 250ms) var(--easing-standard, ease); /* Controls animation speed and smoothness */
 }
 
 /* Open state: reveals panel content with transition */
 .shop-item.open .shop-panel {
-  max-height: 1000px;                                                         /* Expands panel height to accommodate content */
-  opacity: 1;                                                                 /* Makes panel content visible */
+  max-height: 1000px; /* Expands panel height to accommodate content */
+  opacity: 1; /* Makes panel content visible */
 }
 
 /* ================================== */
@@ -734,54 +739,41 @@ body {
 /* ================================== */
 
 .shop-panel {
-  max-height: 0;                                                  /* Collapsed by default */
-  overflow: hidden;                                               /* Hides internal content visually */
-  transition: max-height 0.4s ease;                               /* Smooth expand/collapse animation */
-  visibility: hidden;                                             /* Hidden from sight and focus when collapsed */
-  pointer-events: none;                                           /* Disables clicking or tabbing into hidden panels */
+  max-height: 0; /* Collapsed by default */
+  overflow: hidden; /* Hides internal content visually */
+  transition: max-height 0.4s ease; /* Smooth expand/collapse animation */
+  visibility: hidden; /* Hidden from sight and focus when collapsed */
+  pointer-events: none; /* Disables clicking or tabbing into hidden panels */
 }
 
 /* When panel is opened (JS adds .open to parent) */
 .shop-item.open .shop-panel {
-  max-height: 300px;                                              /* Expands section smoothly */
-  visibility: visible;                                            /* Makes content visible */
-  pointer-events: auto;                                           /* Enables interaction */
-  overflow: visible;                                              /* Allows text to display normally */
+  max-height: 300px; /* Expands section smoothly */
+  visibility: visible; /* Makes content visible */
+  pointer-events: auto; /* Enables interaction */
+  overflow: visible; /* Allows text to display normally */
 }
-
-
 
 /* Mobile layout: stacks trigger and panel vertically */
 @media (max-width: 600px) {
   .shop-item {
-    flex-direction: column;                                                   /* Changes layout to vertical stack for small screens */
+    flex-direction: column; /* Changes layout to vertical stack for small screens */
   }
   .shop-toggle {
-    flex-basis: auto;                                                         /* Allows flexible trigger width on smaller viewports */
+    flex-basis: auto; /* Allows flexible trigger width on smaller viewports */
   }
 }
 
 /* Reduced motion preference: disables animation transitions */
 @media (prefers-reduced-motion: reduce) {
   .shop-panel {
-    transition: none;                                                         /* Removes transition effects for accessibility */
+    transition: none; /* Removes transition effects for accessibility */
   }
 }
-
-
-
-
-
-
 
 /* ================================== */
 /* VIDEO / MULTIMEDIA                 */
 /* ================================== */
-
-
-
-
-
 
 /* ================================== */
 /* RESPONSIVE DESIGN (MEDIA QUERIES)  */
@@ -793,15 +785,14 @@ body {
 /* Applies styles only when the viewport width 
    is 768px or less (typical tablet or phone size). */
 @media (max-width: 768px) {
-
   /* =============================== */
   /* HEADER ROW ADJUSTMENTS           */
   /* Stacks logo and navigation vertically 
      and centers them for better visibility. */
   /* =============================== */
   .header-row {
-    flex-direction: column;         /* Changes layout from row to column */
-    text-align: center;             /* Centers text when stacked vertically */
+    flex-direction: column; /* Changes layout from row to column */
+    text-align: center; /* Centers text when stacked vertically */
   }
 
   /* =============================== */
@@ -810,7 +801,7 @@ body {
      separate them from the logo area. */
   /* =============================== */
   .nav {
-    margin-top: 1rem;               /* Adds top space between brand and links */
+    margin-top: 1rem; /* Adds top space between brand and links */
   }
 
   /* =============================== */
@@ -819,11 +810,9 @@ body {
      smaller screens for better readability. */
   /* =============================== */
   .hero-text {
-    text-align: center;             /* Centers hero section text on mobile */
+    text-align: center; /* Centers hero section text on mobile */
   }
 }
-
-
 
 /* === ORDER PAGE GRID STYLING === */
 .product-grid {
@@ -882,7 +871,6 @@ body {
   font-size: 1rem;
 }
 
-
 @media (min-width: 992px) {
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -895,9 +883,6 @@ body {
   }
 }
 
-
-
-
 .hero--sub {
   background: var(--surface-2, #f8f8f5);
   padding-block: 2.5rem;
@@ -905,6 +890,7 @@ body {
 }
 .hero__content {
   max-width: 60ch;
+  margin: 0 auto;
 }
 
 /* Product grid layout */
@@ -1012,13 +998,16 @@ body {
   }
 }
 
-
 /* ============================= */
 /* WHOLESALE INTRO SECTION STYLE */
 /* ============================= */
 
 .intro-section {
-  background: linear-gradient(to bottom right, #fafdf8, #ffffff); /* soft neutral tone */
+  background: linear-gradient(
+    to bottom right,
+    #fafdf8,
+    #ffffff
+  ); /* soft neutral tone */
   border-radius: 12px;
   padding: 3rem 2rem;
   margin-bottom: 3rem;
@@ -1031,15 +1020,16 @@ body {
   margin-bottom: 1.75rem;
   font-size: 2rem;
   font-weight: 600;
+  margin: 0 auto;
 }
 
 .intro-section p {
-  max-width: 80ch;              /* Keeps line length readable */
-  margin: 0 auto 1.5rem;        /* Centers text and adds spacing */
-  line-height: 1.8;             /* Improves readability */
+  max-width: 80ch; /* Keeps line length readable */
+  margin: 0 auto 1.5rem; /* Centers text and adds spacing */
+  line-height: 1.8; /* Improves readability */
   font-size: 1.05rem;
   color: #333;
-  text-align: justify;          /* Creates clean paragraph edges */
+  text-align: justify; /* Creates clean paragraph edges */
 }
 
 .intro-section .lead {
