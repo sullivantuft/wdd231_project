@@ -15,24 +15,52 @@
    These variables can be referenced anywhere 
    using var(--variable-name). */
 /* ================================== */
-:root {
+
+/* ====================================*/
+/* this is the first colors we had
+/* ====================================*/
+/*:root {
   --color-primary: #4CAF50;                     /* Main brand green used for buttons and highlights */
-  --color-primary-dark: #2E7D32;                /* Darker shade of green for hover states and headers */
+  /*--color-primary-dark: #2E7D32;                /* Darker shade of green for hover states and headers */
   
 
 
---color-primary-light: #e4dfd7;
+/*--color-primary-light: #e4dfd7;
 
 /*--color-primary-light: #e9ece2;*/           /* Light green used for soft backgrounds or accents */
 
 
   /*--color-primary-light: #C8E6C9; */            /* Light green used for soft backgrounds or accents */
-  --color-accent: #FDD835;                      /* Bright yellow accent color for emphasis */
-  --color-bg: #F9F7F3;                          /* Off-white background color for page sections */
-  --color-text-dark: #2B2B2B;                   /* Default dark text for body content */
-  --color-text-light: #FFFFFF;                  /* White text for contrast on dark backgrounds */
-}
+  /*--color-accent: #FDD835;                      /* Bright yellow accent color for emphasis */
+  /* --color-bg: #F9F7F3;                          /* Off-white background color for page sections */
+  /*--color-text-dark: #2B2B2B;                   /* Default dark text for body content */
+  /*--color-text-light: #FFFFFF;                  /* White text for contrast on dark backgrounds */
+/*} */
 
+
+/* ===================================*/
+/* Updated color scheme */
+/* ====================================*/
+:root {
+  /* HEADER + NAV BAR */
+  --color-primary: #0A3D62;          /* Dark water blue (header background, CTA emphasis) */
+  --color-primary-dark: #082D49;     /* Even deeper blue for hover or header shading */
+
+  /* BUTTONS */
+  --color-button-primary: #1B5E20;   /* Deep forest green */
+  --color-button-primary-dark: #0F3A12; /* Darker forest green for hover */
+
+  /* ACCENTS */
+  --color-accent: #FDD835;           /* Yellow accent kept the same */
+
+  /* BACKGROUND + TEXT */
+  --color-bg: #F9F7F3;               /* Soft beige background (same as yours) */
+  --color-text-dark: #2B2B2B;        /* Dark gray text */
+  --color-text-light: #FFFFFF;       /* Pure white text */
+
+  /* OPTIONAL LIGHT SHADE */
+  --color-primary-light: #e4dfd7;    /* Neutral light tan used in the hero */
+}
 
 /* ================================== */
 /* ANIMATIONS / TRANSITIONS           */
@@ -746,38 +774,9 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ================================== */
 /* VIDEO / MULTIMEDIA                 */
 /* ================================== */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
