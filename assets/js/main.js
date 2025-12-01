@@ -65,3 +65,31 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 }
 init();
+
+// CONTACT FORM HANDLER
+const contactForm = document.getElementById("contact-form");
+const successMessage = document.getElementById("form-success");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    successMessage.hidden = false;
+    contactForm.reset();
+  });
+}
+
+
+
+// WHOLESALE FORM HANDLER
+const wholesaleForm = document.getElementById("wholesale-form");
+const wholesaleSuccess = document.getElementById("wholesale-success");
+
+if (wholesaleForm) {
+  wholesaleForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    wholesaleSuccess.hidden = false;
+    wholesaleForm.reset();
+  });
+}

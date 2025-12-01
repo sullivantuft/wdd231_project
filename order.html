@@ -9,13 +9,16 @@
   </head>
 
   <body>
-
-
-    
     <main id="app" class="container">
       <section class="order-section">
         <h2 class="section-title">Place an Order</h2>
         <h3 class="section-title">Choose quantities in <strong>pounds (lbs)</strong> for the items below. Prices shown are per pound.</h3>
+
+
+        <!-- SUCCESS MESSAGE -->
+        <div id="order-success" class="form-success" hidden>
+          Your order has been submitted! We will contact you soon.
+        </div>
 
         <form id="order-form" class="form">
           <fieldset class="form-grid">
@@ -54,7 +57,7 @@
           </fieldset>
         </form>
         <div class="form-field form-field-full">
-            <button type="button" id="view-orders-btn" class="btn btn-secondary">View All Orders</button>
+            <button type="button" id="view-orders-btn" class="btn btn-secondary">View All Your Orders</button>
             </div>
             <div id="orders-list" class="orders-list"></div>
       </section>
