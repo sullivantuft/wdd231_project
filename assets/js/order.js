@@ -88,7 +88,9 @@ async function initOrderPage() {
     // Save back to localStorage
     localStorage.setItem("orders", JSON.stringify(existingOrders));
 
-    alert("Thanks — your order has been placed! We’ll follow up by email.");
+    const successBox = document.getElementById("order-success");
+    successBox.hidden = false;
+
     form.reset();
     updateTotal();
   });

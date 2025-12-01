@@ -93,3 +93,17 @@ if (wholesaleForm) {
     wholesaleForm.reset();
   });
 }
+
+
+// RETAIL SUBSCRIBE FORM HANDLER
+const subscribeForm = document.getElementById("subscribe-form");
+const subscribeSuccess = document.getElementById("subscribe-success");
+
+if (subscribeForm) {
+  subscribeForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    subscribeSuccess.hidden = false;
+    subscribeForm.reset();
+  });
+}
