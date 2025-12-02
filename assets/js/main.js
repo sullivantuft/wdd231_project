@@ -62,7 +62,15 @@ function init() {
   });
 }
 
+//===============
+// call INIT
+//============
+
 init();
+
+if (document.querySelector("#hero")) {
+  loadHero();
+}
 
 // ===============================
 // CONTACT FORM HANDLER
