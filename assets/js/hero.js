@@ -1,4 +1,3 @@
- 
 // ===============================
 // HERO SECTION WITH CAROUSEL
 // ===============================
@@ -25,6 +24,24 @@ export function loadHero() {
       <p>Premium produce grown year-round right here in Utah.</p>
     </div>
   `;
+
+  // ===============================
+  // ASSIGN IMAGES TO SLIDES
+  // ===============================
+  const imagePaths = [
+    "../../images/farm_scene_compressed.webp",
+    "../../images/bumpercrop.webp",
+    "../../images/strawberry_woman.webp"
+
+  ];
+
+  const slides = heroSection.querySelectorAll(".hero-slide");
+
+  slides.forEach((slide, i) => {
+    slide.style.backgroundImage = `url('${imagePaths[i % imagePaths.length]}')`;
+    slide.style.backgroundSize = "cover";
+    slide.style.backgroundPosition = "center";
+  });
 }
 
 
