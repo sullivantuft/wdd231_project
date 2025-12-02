@@ -29,9 +29,9 @@ export function loadHero() {
   // ASSIGN IMAGES TO SLIDES
   // ===============================
   const imagePaths = [
-    "../../images/farm_scene_compressed.webp",
-    "../../images/bumpercrop.webp",
-    "../../images/strawberry_woman.webp"
+    "/assets/images/farm_scene_compressed.webp",
+    "/assets/images/bumpercrop.webp",
+    "/assets/images/strawberry_woman.webp"
 
   ];
 
