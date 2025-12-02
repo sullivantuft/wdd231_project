@@ -1,108 +1,106 @@
 import { loadHeaderAndFooter } from "./headerFooter.js";
 import { loadProduce } from "./produce.js";
-import { loadHero } from "./hero.js"
+import { loadHero } from "./hero.js";
 
+// ===============================
+// INITIALIZE PAGE
+// ===============================
+function init() {
 
-function init(){
-// ==================================================
-// WAYS TO SHOP ACCORDION FUNCTIONALITY
-// ----------------------------------------------
-// Handles click events for each .shop-toggle button.
-// When clicked, toggles the .open class on its
-// corresponding .shop-item to reveal or hide content.
-// ==================================================
-document.addEventListener('DOMContentLoaded', () => {
-  const toggles = document.querySelectorAll('.shop-toggle'); // Select all toggle buttons
+  // Load header and footer immediately
+  loadHeaderAndFooter();
 
-  //Loads header, footer, and hero banner.
-  loadHeaderAndFooter(); 
-  if(document.querySelector("#hero")){
+  // Load hero if the element exists on this page
+  if (document.querySelector("#hero")) {
     loadHero();
   }
+
+  // Load featured produce on index.html
   if (document.querySelector("#produce-grid")) {
     loadProduce();
   }
-  
 
-  toggles.forEach((button) => {
-    // Resolve related elements once per button
-    const item = button.closest('.shop-item');             // Parent container for the pair
-    const panel = item ? item.querySelector('.shop-panel') : null; // Associated panel
+  // Accordion logic (Wholesale/Retail pages)
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggles = document.querySelectorAll('.shop-toggle');
 
-    // Initialize ARIA and focus behavior based on initial state (.open or not)
-    const startsOpen = item && item.classList.contains('open'); // Supports pre-opened state via markup
-    button.setAttribute('aria-expanded', String(!!startsOpen)); // true if open
-    if (panel) {
-      panel.setAttribute('aria-hidden', String(!startsOpen));   // hidden when closed
-      if (!startsOpen) {
-        panel.setAttribute('inert', '');                        // remove from tab order when closed
-      } else {
-        panel.removeAttribute('inert');                         // focusable when open
-      }
-    }
+    toggles.forEach((button) => {
+      const item = button.closest('.shop-item');
+      const panel = item ? item.querySelector('.shop-panel') : null;
 
-    // Existing click behavior + synchronized ARIA/inert updates
-    button.addEventListener('click', () => {
-      const wasExpanded = button.getAttribute('aria-expanded') === 'true'; // Previous state
+      const startsOpen = item && item.classList.contains('open');
 
-      // Toggle the open/closed class for styling
-      item.classList.toggle('open');
+      button.setAttribute('aria-expanded', String(!!startsOpen));
 
-      // Update ARIA attributes for accessibility
-      button.setAttribute('aria-expanded', String(!wasExpanded)); // Reflect expanded/collapsed state
       if (panel) {
-        panel.setAttribute('aria-hidden', String(wasExpanded));   // Sync panel visibility state
+        panel.setAttribute('aria-hidden', String(!startsOpen));
 
-        // Manage inert to prevent focus from entering hidden panels
-        if (wasExpanded) {
-          panel.setAttribute('inert', '');                        // Now closed -> remove from tab order
+        if (!startsOpen) {
+          panel.setAttribute('inert', '');
         } else {
-          panel.removeAttribute('inert');                         // Now open  -> allow interaction
+          panel.removeAttribute('inert');
         }
       }
+
+      button.addEventListener('click', () => {
+        const wasExpanded = button.getAttribute('aria-expanded') === 'true';
+
+        item.classList.toggle('open');
+        button.setAttribute('aria-expanded', String(!wasExpanded));
+
+        if (panel) {
+          panel.setAttribute('aria-hidden', String(wasExpanded));
+
+          if (wasExpanded) {
+            panel.setAttribute('inert', '');
+          } else {
+            panel.removeAttribute('inert');
+          }
+        }
+      });
     });
   });
-});
 }
+
 init();
 
+// ===============================
 // CONTACT FORM HANDLER
+// ===============================
 const contactForm = document.getElementById("contact-form");
 const successMessage = document.getElementById("form-success");
 
 if (contactForm) {
   contactForm.addEventListener("submit", function (event) {
     event.preventDefault();
-
     successMessage.hidden = false;
     contactForm.reset();
   });
 }
 
-
-
+// ===============================
 // WHOLESALE FORM HANDLER
+// ===============================
 const wholesaleForm = document.getElementById("wholesale-form");
 const wholesaleSuccess = document.getElementById("wholesale-success");
 
 if (wholesaleForm) {
   wholesaleForm.addEventListener("submit", function (event) {
     event.preventDefault();
-
     wholesaleSuccess.hidden = false;
     wholesaleForm.reset();
   });
 }
 
-
+// ===============================
 // RETAIL SUBSCRIBE FORM HANDLER
+// ===============================
 const subscribeForm = document.getElementById("subscribe-form");
 const subscribeSuccess = document.getElementById("subscribe-success");
 
 if (subscribeForm) {
   subscribeForm.addEventListener("submit", function (event) {
     event.preventDefault();
-
     subscribeSuccess.hidden = false;
     subscribeForm.reset();
   });

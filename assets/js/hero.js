@@ -1,30 +1,45 @@
-export function loadHero(){
-    const heroContainer = document.querySelector("#hero");
-    if (!heroContainer) return;
+ 
+// ===============================
+// HERO SECTION WITH CAROUSEL
+// ===============================
+export function loadHero() {
+  const heroSection = document.getElementById("hero");
+  if (!heroSection) return;
 
-    heroContainer.innerHTML = 
-    ` <img
-        src="assets/images/hero.jpg"
-        alt="Garden fresh produce from Utah Farm and Flowers"
-        class="hero-img"
-      />
-      <div class="hero-copy">
-        <h2 class="hero-title">Fresh, Local, Sustainable</h2>
-        <p class="hero-text">
-          Utah Farm and Flowers is a family owned and operated urban farm located in Utah.
-          We specialize in growing high-quality, fresh produce and flowers using sustainable
-          farming practices. Our mission is to provide local restaurants and consumers with
-          the freshest, healthiest food possible while minimizing our environmental impact.
-          We grow pesticide free greens, herbs, and flowers using efficient techniques to
-          maximize space and reduce water usage. We are committed to supporting our community
-          by providing fresh, healthy food options and promoting sustainable agriculture.
-        </p>
-        <a class="btn btn-primary" href="#wholesale">Shop Now</a>
-        <div class="badges">
-          <span class="badge">Pesticide Free</span>
-          <span class="badge">Sustainably Grown</span>
-          <span class="badge">Locally Owned</span>
-        </div>
-      </div>
-    `;
-}   
+  heroSection.innerHTML = `
+    <div class="hero-carousel">
+
+      <!-- Slide 1 -->
+      <div class="hero-slide active"></div>
+
+      <!-- Slide 2 -->
+      <div class="hero-slide"></div>
+
+      <!-- Slide 3 -->
+      <div class="hero-slide"></div>
+
+    </div>
+
+    <div class="hero-content">
+      <h1>Fresh. Local. Sustainable.</h1>
+      <p>Premium produce grown year-round right here in Utah.</p>
+    </div>
+  `;
+}
+
+
+// ===============================
+// HERO CAROUSEL ROTATION SCRIPT
+// ===============================
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll(".hero-slide");
+  let index = 0;
+
+  function showNextSlide() {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+  }
+
+  setInterval(showNextSlide, 5000); // 5 seconds per slide
+});

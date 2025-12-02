@@ -7,7 +7,14 @@ export function loadHeaderAndFooter(){
           <img src="assets/images/utah_logo.png" alt="Utah Farms and Flowers logo" class="logo">
           <h1>Utah Farms & Flowers</h1>
         </div>
-        <nav class="nav" aria-label="Primary navigation">
+
+        <!--Mobile Menu Button -->
+        <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="primary-nav">
+          ≡
+        </button>
+
+
+        <nav class="nav" id="primary-nav" aria-label="Primary navigation">
           <a href="index.html">Home</a>
           <a href="wholesale.html">Wholesale</a>
           <a href="retail.html">Retail</a>
@@ -17,7 +24,7 @@ export function loadHeaderAndFooter(){
         </nav>
       </div>
     </header>
-  `;
+    `;
     
 
     const footerHTML=`
@@ -62,3 +69,19 @@ export function loadHeaderAndFooter(){
 
     document.getElementById("year").textContent = new Date().getFullYear();
 }
+
+
+// Mobile Menu Toggle
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById("menu-toggle");
+  const nav = document.getElementById("primary-nav");
+
+  if (!toggle || !nav) return;
+
+  toggle.addEventListener("click", () => {
+    nav.classList.toggle("open");
+
+    const expanded = toggle.getAttribute("aria-expanded") === "true";
+    toggle.setAttribute("aria-expanded", !expanded);
+  });
+});
