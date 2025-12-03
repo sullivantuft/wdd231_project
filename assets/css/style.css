@@ -183,6 +183,16 @@ body {
   background-color: #fbc02d; /* Slightly darker yellow on hover for interaction cue */
 }
 
+/* "View All Your Orders" button: always about 50% of the form width and centered */
+#view-orders-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 1.5rem auto 0;
+  text-align: center;
+}
+
 /* ================================== */
 /* BADGE CONTAINER                     */
 /* Controls spacing around multiple badges 
@@ -241,12 +251,24 @@ body {
 
 .form {
   width: 100%; /* lets the form stretch the full width of its parent container (.container)  */
-  max-width: 1200px; /* but never wider than 600 px, keeping it narrow and easy to read            */
+  max-width: 1200px; /* wide enough for complex layouts like the order form */
   margin: 0 auto; /* centers the form horizontally by giving equal left/right margins           */
   background-color: #fff; /* makes the form box white against the beige page background                 */
-  padding: 2rem; /* adds space inside the box so text/inputs don’t touch the edges             */
+  padding: 2rem; /* adds space inside the box so text/inputs dont touch the edges             */
   border-radius: 10px; /* rounds the corners for a softer, modern look                              */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* adds a faint drop shadow so it appears slightly raised     */
+}
+
+/* Narrow form variant for contact/wholesale forms so they dont span the full page width on large screens */
+.form--narrow {
+  max-width: 720px;
+}
+
+/* Order form: slightly narrower on very large screens so fields dont feel edge-to-edge */
+@media (min-width: 1200px) {
+  .order-form {
+    max-width: 960px;
+  }
 }
 
 /* ================================== */
@@ -586,9 +608,24 @@ body {
 
 .produce-grid {
   display: grid; /* Enables CSS Grid layout */
-  grid-template-columns: 1fr 1fr 1fr; /* Three equal-width columns */
+  grid-template-columns: repeat(3, 1fr); /* Three equal-width columns */
   gap: 2rem; /* Space between grid items */
   justify-items: center; /* Centers each grid item horizontally */
+}
+
+/* Responsive produce grid */
+@media (max-width: 900px) {
+  .produce-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .produce-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
 }
 
 /* ================================== */
@@ -815,10 +852,33 @@ body {
 }
 
 /* === ORDER PAGE GRID STYLING === */
+.product-section {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 1rem 1.25rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.product-section > summary {
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+
+.product-section > summary::-webkit-details-marker {
+  display: none;
+}
+
+.product-section[open] .product-grid {
+  margin-top: 1rem;
+}
+
 .product-grid {
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: 1fr, 1fr, 1fr;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 /* Each product item card */
@@ -834,8 +894,9 @@ body {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Hover effect for visual polish */
-.product-item:hover {
+/* Hover effect for visual polish (shared with home page produce cards) */
+.product-item:hover,
+.produce-item:hover {
   transform: translateY(-4px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -847,6 +908,17 @@ body {
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 0.75rem;
+}
+
+/* Mobile optimization for product items */
+@media (max-width: 600px) {
+  .product-item {
+    padding: 0.75rem;
+  }
+
+  .product-item img {
+    height: 200px;
+  }
 }
 
 /* Default hamburger button styling */
@@ -872,7 +944,6 @@ body {
 
 /* Mobile: show hamburger, hide nav until opened */
 @media (max-width: 768px) {
-
   .menu-toggle {
     display: block;
   }
@@ -881,15 +952,13 @@ body {
     display: none;
     flex-direction: column;
     gap: 1rem;
-    background: #1a1a1a; /* dark dropdown matches your dark header */
     padding: 1rem;
   }
 
   .nav.open {
-    display: flex;  /* dropdown shows when JS toggles .open */
+    display: flex; /* dropdown shows when JS toggles .open */
   }
 }
-
 
 /* Product name + price */
 .produce-name {
@@ -913,15 +982,24 @@ body {
   font-size: 1rem;
 }
 
-@media (min-width: 992px) {
-  .product-grid {
+/* Responsive grid breakpoints */
+@media (max-width: 900px) {
+  .product-grid,
+  .product-grid--retail {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 599px) {
-  .product-grid {
+@media (max-width: 600px) {
+  .product-grid,
+  .product-grid--retail {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 992px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -937,7 +1015,8 @@ body {
 
 /* Product grid layout */
 .product-grid--retail {
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
 }
 .product-card {
@@ -945,6 +1024,12 @@ body {
   grid-template-rows: auto 1fr;
   border-radius: 12px;
   overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 .product-card__media {
   aspect-ratio: 4/3;
@@ -1034,6 +1119,10 @@ body {
 .form-field--button {
   align-self: end;
 }
+#view-orders-btn {
+  display: flex;
+  text-align: center;
+}
 @media (max-width: 720px) {
   .form--inline .form-grid--inline {
     grid-template-columns: 1fr;
@@ -1094,46 +1183,44 @@ body {
 
 /* Desktop defaults */
 .hero-slide {
-    width: 100%;
-    height: 480px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: opacity 0.8s ease-in-out;
+  width: 100%;
+  height: 480px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: opacity 0.8s ease-in-out;
 }
 
 /* Large tablets / small laptops */
 @media (max-width: 1100px) {
-    .hero-slide {
-        height: 420px;
-    }
+  .hero-slide {
+    height: 420px;
+  }
 }
 
 /* Tablets (horizontal or vertical) */
 @media (max-width: 900px) {
-    .hero-slide {
-        height: 350px;
-        background-position: center top;
-    }
+  .hero-slide {
+    height: 350px;
+    background-position: center top;
+  }
 }
 
 /* Phones (regular) */
 @media (max-width: 600px) {
-    .hero-slide {
-        height: 260px;
-        background-position: center top;
-    }
+  .hero-slide {
+    height: 260px;
+    background-position: center top;
+  }
 }
 
 /* Small phones (iPhone SE, older Androids) */
 @media (max-width: 420px) {
-    .hero-slide {
-        height: 220px;
-        background-position: center top;
-    }
+  .hero-slide {
+    height: 220px;
+    background-position: center top;
+  }
 }
-
-
 
 /* =============================== */
 /* HERO CAROUSEL BASE STYLES       */
@@ -1142,7 +1229,7 @@ body {
 .hero-carousel {
   position: relative;
   width: 100%;
-  height: 300px;           /* Change later if needed */
+  height: 300px; /* Change later if needed */
   overflow: hidden;
   border-radius: 12px;
 }
@@ -1180,4 +1267,121 @@ body {
 
 .hero-content p {
   font-size: 1.2rem;
+}
+
+/* ================================== */
+/* PRODUCT MODAL                      */
+/* ================================== */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-content {
+  transform: scale(1);
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--color-primary-dark);
+  color: white;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: background-color 0.2s ease;
+}
+
+.modal-close:hover {
+  background-color: var(--color-primary);
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.modal-body {
+  padding: 2rem;
+}
+
+.modal-body h2 {
+  color: var(--color-primary-dark);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.75rem;
+}
+
+.modal-body .price {
+  color: var(--color-primary);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.modal-body p {
+  line-height: 1.6;
+  color: var(--color-text-dark);
+  margin-bottom: 1rem;
+}
+
+.modal-body .btn {
+  margin-top: 1rem;
+}
+
+@media (max-width: 600px) {
+  .modal-content {
+    width: 95%;
+    max-height: 95vh;
+  }
+
+  .modal-body {
+    padding: 1.5rem;
+  }
+
+  .modal-body h2 {
+    font-size: 1.5rem;
+  }
 }

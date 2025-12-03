@@ -4,7 +4,10 @@ export function loadHeaderAndFooter(){
     <header class="site-header">
       <div class="container header-row">
         <div class="brand">
-          <img src="assets/images/utah_logo.png" alt="Utah Farms and Flowers logo" class="logo">
+          <picture>
+            <source srcset="assets/images/utah_logo_300.webp" type="image/webp">
+            <img src="assets/images/utah_logo.png" alt="Utah Farms and Flowers logo" class="logo" height="50" decoding="async">
+          </picture>
           <h1>Utah Farms & Flowers</h1>
         </div>
 
