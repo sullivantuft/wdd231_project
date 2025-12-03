@@ -29,10 +29,9 @@ export function loadHero() {
   // ASSIGN IMAGES TO SLIDES
   // ===============================
   const imagePaths = [
-    "/assets/images/farm_scene_compressed.webp",
-    "/assets/images/bumpercrop.webp",
-    "/assets/images/strawberry_woman.webp"
-
+    "assets/images/farm_scene_compressed.webp",
+    "assets/images/bumpercrop.webp",
+    "assets/images/strawberry_woman.webp",
   ];
 
   const slides = heroSection.querySelectorAll(".hero-slide");
@@ -43,7 +42,6 @@ export function loadHero() {
     slide.style.backgroundPosition = "center";
   });
 }
-
 
 // ===============================
 // HERO CAROUSEL ROTATION SCRIPT
