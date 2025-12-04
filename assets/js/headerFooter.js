@@ -46,16 +46,16 @@ export function loadHeaderAndFooter(){
 
         <div>
           <h4>Follow Us</h4>
-          <p>
-            <a href="#">Facebook</a><br />
-            <a href="#">Instagram</a><br />
-            <a href="#">Twitter</a><br />
-            <a href="#">TikTok</a><br />
-            <a href="#">Pinterest</a><br />
-            <a href="#">YouTube</a><br />
-            <a href="#">LinkedIn</a><br />
-            <a href="#">Yelp</a>
-          </p>
+          <ul class="footer-social">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">TikTok</a></li>
+            <li><a href="#">Pinterest</a></li>
+            <li><a href="#">YouTube</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Yelp</a></li>
+          </ul>
         </div>
 
         <div class="copy">

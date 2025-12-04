@@ -339,6 +339,35 @@ body {
   text-align: center; /* Centers all text within each grid cell */
 }
 
+/* Footer social links laid out in a responsive row that wraps nicely */
+.footer-social {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  justify-content: center;
+}
+
+.footer-social li {
+  margin: 0;
+}
+
+/* Stack footer columns on small screens for better readability */
+@media (max-width: 720px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .footer-grid > div,
+  .copy {
+    text-align: center;
+  }
+}
+
 /* ================================== */
 /* FOOTER LINKS                        */
 /* Styles hyperlinks in the footer section. */
