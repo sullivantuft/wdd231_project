@@ -2,23 +2,30 @@
 //It also calculates the total and saves the order information to local storage. It then creates a view all orders button that allows you
 //to view all orders
 import { loadHeaderAndFooter } from "./headerFooter.js";
+import { showFormModal } from "./formModal.js";
 loadHeaderAndFooter();
 
 document.addEventListener("DOMContentLoaded", initOrderPage);
 
 async function initOrderPage() {
-  const grid = document.getElementById("product-grid");
+  const sections = document.getElementById("product-sections");
   const totalDisplay = document.getElementById("order-total");
+
+  if (!sections || !totalDisplay) {
+    return;
+  }
   const form = document.getElementById("order-form");
 
   //load produce from JSON
   const response = await fetch("assets/data/produce.json");
   const data = await response.json();
 
-  grid.innerHTML = data.produce
-    .map(
-      (item) =>
-        `
+  const fruits = data.produce.filter((item) => item.category === "fruit");
+  const vegetables = data.produce.filter(
+    (item) => item.category === "vegetable" || !item.category
+  );
+
+  const renderItem = (item) => `
         <div class="product-item" data-name="${item.name}">
         <img src="${item.image}" alt="${item.alt}" class="produce-img" />
         <h4 class="produce-name">${item.name}</h4>
@@ -39,11 +46,26 @@ async function initOrderPage() {
           data-price="${item.pricePerLb}"
         />
       </div>
-        `
-    )
-    .join("");
+  `;
 
-  const qtyInputs = grid.querySelectorAll(".qty-input");
+  const renderSection = (title, items) => {
+    if (!items.length) return "";
+    return `
+      <details class="product-section">
+        <summary>${title}</summary>
+        <div class="product-grid">
+          ${items.map(renderItem).join("")}
+        </div>
+      </details>
+    `;
+  };
+
+  sections.innerHTML = `
+    ${renderSection("Vegetables", vegetables)}
+    ${renderSection("Fruits", fruits)}
+  `;
+
+  const qtyInputs = sections.querySelectorAll(".qty-input");
 
   function updateTotal() {
     let total = 0;
@@ -90,6 +112,11 @@ async function initOrderPage() {
 
     const successBox = document.getElementById("order-success");
     successBox.hidden = false;
+
+    showFormModal(
+      "Your order has been submitted! We will contact you soon.",
+      "Order submitted"
+    );
 
     form.reset();
     updateTotal();
@@ -140,7 +167,7 @@ async function initOrderPage() {
   const selectedItem = params.get("item");
 
   if (selectedItem) {
-    const match = [...grid.querySelectorAll(".product-item")].find(
+    const match = [...sections.querySelectorAll(".product-item")].find(
       (item) => item.dataset.name === selectedItem
     );
 

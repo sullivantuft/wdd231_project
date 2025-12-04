@@ -4,7 +4,10 @@ export function loadHeaderAndFooter(){
     <header class="site-header">
       <div class="container header-row">
         <div class="brand">
-          <img src="assets/images/utah_logo.png" alt="Utah Farms and Flowers logo" class="logo">
+          <picture>
+            <source srcset="assets/images/utah_logo_300.webp" type="image/webp">
+            <img src="assets/images/utah_logo.png" alt="Utah Farms and Flowers logo" class="logo" height="50" decoding="async">
+          </picture>
           <h1>Utah Farms & Flowers</h1>
         </div>
 
@@ -43,16 +46,16 @@ export function loadHeaderAndFooter(){
 
         <div>
           <h4>Follow Us</h4>
-          <p>
-            <a href="#">Facebook</a><br />
-            <a href="#">Instagram</a><br />
-            <a href="#">Twitter</a><br />
-            <a href="#">TikTok</a><br />
-            <a href="#">Pinterest</a><br />
-            <a href="#">YouTube</a><br />
-            <a href="#">LinkedIn</a><br />
-            <a href="#">Yelp</a>
-          </p>
+          <ul class="footer-social">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">TikTok</a></li>
+            <li><a href="#">Pinterest</a></li>
+            <li><a href="#">YouTube</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Yelp</a></li>
+          </ul>
         </div>
 
         <div class="copy">

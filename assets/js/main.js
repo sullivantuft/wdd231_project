@@ -1,6 +1,7 @@
 import { loadHeaderAndFooter } from "./headerFooter.js";
 import { loadProduce } from "./produce.js";
 import { loadHero } from "./hero.js";
+import { showFormModal } from "./formModal.js";
 
 // ===============================
 // INITIALIZE PAGE
@@ -82,6 +83,10 @@ if (contactForm) {
   contactForm.addEventListener("submit", function (event) {
     event.preventDefault();
     successMessage.hidden = false;
+    showFormModal(
+      "Thanks! Your request was received. We will email you shortly.",
+      "Message sent"
+    );
     contactForm.reset();
   });
 }
@@ -96,6 +101,10 @@ if (wholesaleForm) {
   wholesaleForm.addEventListener("submit", function (event) {
     event.preventDefault();
     wholesaleSuccess.hidden = false;
+    showFormModal(
+      "Your wholesale request has been received. We will contact you shortly.",
+      "Wholesale request sent"
+    );
     wholesaleForm.reset();
   });
 }
@@ -110,6 +119,10 @@ if (subscribeForm) {
   subscribeForm.addEventListener("submit", function (event) {
     event.preventDefault();
     subscribeSuccess.hidden = false;
+    showFormModal(
+      "Thanks! You are now subscribed to weekly availability updates.",
+      "Subscribed"
+    );
     subscribeForm.reset();
   });
 }
