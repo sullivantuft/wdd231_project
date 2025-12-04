@@ -317,6 +317,31 @@ body {
   text-align: center; /* Centers all text within each grid cell */
 }
 
+/* ==================================  */
+/* FOOTER RESPONSIVE FIX               */
+/* ================================== */
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;   /* stack footer sections vertically */
+    text-align: center;
+  }
+
+  /* if your social icons are in a flex row, allow wrapping */
+  .footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-social img {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+
 /* ================================== */
 /* FOOTER LINKS                        */
 /* Styles hyperlinks in the footer section. */
@@ -1132,6 +1157,7 @@ body {
         background-position: center top;
     }
 }
+
 
 
 
