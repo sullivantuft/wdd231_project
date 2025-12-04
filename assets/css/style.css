@@ -1434,3 +1434,83 @@ body {
     font-size: 1.5rem;
   }
 }
+
+
+/* ==========================================
+   GLOBAL RESPONSIVE IMAGE RULES
+   Makes ALL images scale properly on all screens
+   ========================================== */
+img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+picture,
+figure {
+  width: 100%;
+  display: block;
+}
+
+/* ==========================================
+   REUSABLE RESPONSIVE IMAGE CLASS
+   Add class="responsive-img" to any <img>
+   ========================================== */
+.responsive-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* ==========================================
+   CARD & GRID IMAGE RESPONSIVENESS
+   Ensures retail / wholesale / produce images
+   resize properly inside cards and grids
+   ========================================== */
+.card img,
+.retail-item img,
+.wholesale-item img,
+.produce-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+
+/* ==========================================
+   GRID RESPONSIVE BREAKPOINTS
+   Adjust # of columns based on screen size
+   ========================================== */
+
+/* Mobile: 1 column */
+@media (max-width: 600px) {
+  .produce-grid,
+  .retail-grid,
+  .wholesale-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Tablets: 2 columns */
+@media (min-width: 600px) and (max-width: 900px) {
+  .produce-grid,
+  .retail-grid,
+  .wholesale-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Desktop: 3 columns */
+@media (min-width: 900px) {
+  .produce-grid,
+  .retail-grid,
+  .wholesale-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
