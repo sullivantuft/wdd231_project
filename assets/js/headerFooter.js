@@ -34,7 +34,7 @@ export function loadHeaderAndFooter(){
     <footer id="site-footer" class="site-footer">
       <div class="container footer-grid">
         <div>
-          <h4>Contact Us</h4>
+          <h3>Contact Us</h3>
           <p>
             Email:
             <a href="mailto:orders@Utahfarmandflowers.email">
@@ -45,7 +45,7 @@ export function loadHeaderAndFooter(){
         </div>
 
         <div>
-          <h4>Follow Us</h4>
+          <h3>Follow Us</h3>
           <ul class="footer-social">
             <li><a href="#">Facebook</a></li>
             <li><a href="#">Instagram</a></li>

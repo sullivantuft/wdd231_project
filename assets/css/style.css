@@ -339,32 +339,10 @@ body {
   text-align: center; /* Centers all text within each grid cell */
 }
 
-/* ==================================  */
-/* FOOTER RESPONSIVE FIX               */
+/* ================================== */
+/* FOOTER — FINAL RESPONSIVE FIX       */
 /* ================================== */
 
-@media (max-width: 768px) {
-  .footer-grid {
-    grid-template-columns: 1fr;   /* stack footer sections vertically */
-    text-align: center;
-  }
-
-  /* if your social icons are in a flex row, allow wrapping */
-  .footer-social {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-
-  .footer-social img {
-    width: 32px;
-    height: 32px;
-  }
-}
-
-
-/* Footer social links laid out in a responsive row that wraps nicely */
 .footer-social {
   list-style: none;
   padding: 0;
@@ -379,12 +357,24 @@ body {
   margin: 0;
 }
 
-/* Stack footer columns on small screens for better readability */
-@media (max-width: 720px) {
+@media (max-width: 768px) {
+
   .footer-grid {
     grid-template-columns: 1fr;
     justify-items: center;
     text-align: center;
+  }
+
+  .footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-social img {
+    width: 32px;
+    height: 32px;
   }
 
   .footer-grid > div,
@@ -392,6 +382,9 @@ body {
     text-align: center;
   }
 }
+
+
+
 
 /* ================================== */
 /* FOOTER LINKS                        */
