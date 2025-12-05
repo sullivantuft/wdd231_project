@@ -467,13 +467,17 @@ body {
 }
 
 
-.brand-title {
-  line-height: 0.9;   /* Tightens the spacing between lines */
+
+
+.brand-center {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.brand-title .utah-script {
-  margin-bottom: -1.5rem;  /* Pulls "Farms & Flowers" upward */
-}
+
 
 /* ========================================================= */
 /* HEADER ROW LAYOUT                                         */
@@ -486,6 +490,33 @@ body {
   justify-content: space-between; /* Pushes logo left, nav links right */
   flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
+
+
+/* Brand title stack */
+.brand-title {
+  margin: 0;
+  line-height: 1.15;
+}
+
+/* Fancy Utah word */
+.brand-title .utah-script {
+  display: block;
+  font-size: 2.8rem;
+  margin-bottom: 0.35rem;
+}
+
+/* Farms & Flowers line */
+.brand-title .farms-flowers {
+  display: block;
+  font-size: 1.6rem;
+}
+
+.brand-title .farms-flowers {
+  display: block;
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;   /* ← spacing before the links */
+}
+
 
 /* ================================== */
 /* BRAND / LOGO AREA                   */
@@ -502,6 +533,11 @@ body {
 /* NAVIGATION MENU                     */
 /* Controls positioning of navigation links */
 /* ================================== */
+
+.nav {
+  margin: 0 14.25rem; /* increase for spacing between links
+}
+
 
 .nav {
   text-align: right; /* Aligns all nav links to the right */
@@ -1597,3 +1633,16 @@ figure {
   }
 }
 
+/* Keep logo locked left and small */
+.logo-wrapper {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 70px;        /* Reduce size */
+  width: auto;
+  max-width: 70px;     /* Prevent stretching */
+  object-fit: contain;
+}

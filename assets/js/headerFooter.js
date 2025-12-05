@@ -2,38 +2,42 @@
 export function loadHeaderAndFooter(){
     const headerHTML=`
     <header class="site-header">
-      <div class="container header-row">
-        <div class="brand">
-          <picture>
-            <source srcset="assets/images/utah_logo_300.webp" type="image/webp">
-            <img src="assets/images/utah_logo.png" alt="Utah Farms and Flowers logo" class="logo" height="50" decoding="async">
-          </picture>
+  <div class="container header-row">
 
-          <h1 class="brand-title">
-          <span class="utah-script">Utah</span>
-          <br />
-          Farms & Flowers
-          </h1>
+    <!-- Left: LOGO (anchored left, does not move) -->
+    <div class="logo-wrapper">
+      <picture>
+        <source srcset="assets/images/utah_logo_300.webp" type="image/webp">
+        <img src="assets/images/utah_logo.png" alt="Utah Farms and Flowers logo" class="logo" height="60" decoding="async">
+      </picture>
+    </div>
 
-          
-        </div>
+    <!-- Centered TITLE above the nav links -->
+    <div class="brand-center">
+      <h1 class="brand-title">
+        <span class="utah-script">Utah</span>
+        <span class="farms-flowers">Farms & Flowers</span>
+      </h1>
 
-        <!--Mobile Menu Button -->
-        <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="primary-nav">
-          ≡
-        </button>
+      <!-- Navigation directly BELOW the title -->
+      <nav class="nav" id="primary-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="wholesale.html">Wholesale</a>
+        <a href="retail.html">Retail</a>
+        <a href="contact.html">Contact</a>
+        <a href="order.html">Order</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
 
+    <!-- Right: Mobile Menu Button -->
+    <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="primary-nav">
+      ≡
+    </button>
 
-        <nav class="nav" id="primary-nav" aria-label="Primary navigation">
-          <a href="index.html">Home</a>
-          <a href="wholesale.html">Wholesale</a>
-          <a href="retail.html">Retail</a>
-          <a href="contact.html">Contact</a>
-          <a href="order.html">Order</a>
-          <a href="about.html">About</a>
-        </nav>
-      </div>
-    </header>
+  </div>
+</header>
+
     `;
     
 
