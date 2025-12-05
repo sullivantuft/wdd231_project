@@ -8,7 +8,14 @@ export function loadHeaderAndFooter(){
             <source srcset="assets/images/utah_logo_300.webp" type="image/webp">
             <img src="assets/images/utah_logo.png" alt="Utah Farms and Flowers logo" class="logo" height="50" decoding="async">
           </picture>
-          <h1>Utah Farms & Flowers</h1>
+
+          <h1 class="brand-title">
+          <span class="utah-script">Utah</span>
+          <br />
+          Farms & Flowers
+          </h1>
+
+          
         </div>
 
         <!--Mobile Menu Button -->

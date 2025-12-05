@@ -8,13 +8,22 @@ export function loadHero() {
   heroSection.innerHTML = `
     <div class="hero-carousel">
 
-      <!-- Slide 1 -->
+      <!-- Slide 1 farm scene -->
       <div class="hero-slide active"></div>
 
-      <!-- Slide 2 -->
+      <!-- Slide 2  farmers market-->
       <div class="hero-slide"></div>
 
-      <!-- Slide 3 -->
+      <!-- Slide 3 strawberry woman-->
+      <div class="hero-slide"></div>
+
+      <!-- Slide 4 grapes-->
+      <div class="hero-slide"></div>
+      
+      <!-- Slide 5 farmer tending field -->
+      <div class="hero-slide"></div>
+      
+      <!-- Slide 6 young caucasian couple -->
       <div class="hero-slide"></div>
 
     </div>
@@ -30,10 +39,14 @@ export function loadHero() {
   // ===============================
   const imagePaths = [
     "assets/images/farm_scene_compressed.webp",
-    "assets/images/bumpercrop.webp",
+    "assets/images/A_photograph_captures_a_farmers_market_scene_on_a.webp",
     "assets/images/strawberry_woman.webp",
+    "assets/images/grapes.webp",
+    "assets/images/A_photograph_captures_a_farmer_tending_to_a_field_.webp",
+    "assets/images/A_photograph_captures_a_young_Caucasian_couple_har.webp"
   ];
 
+  
   const slides = heroSection.querySelectorAll(".hero-slide");
 
   slides.forEach((slide, i) => {
@@ -56,5 +69,5 @@ document.addEventListener("DOMContentLoaded", () => {
     slides[index].classList.add("active");
   }
 
-  setInterval(showNextSlide, 5000); // 5 seconds per slide
+  setInterval(showNextSlide, 3000); // 3 seconds per slide
 });
